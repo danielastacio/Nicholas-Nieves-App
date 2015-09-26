@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="nick.app" ng-controller="Site as site">
+
+<head>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+
+	<h1>{{site.message}}</h1>
+	<div ng-view></div>
+
+
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
+
+	<!--****************  app   **************** -->
+
+	<script src="app/app.module.js"></script>
+	<script src="app/app.routes.js"></script>
+	<script src="app/app.controller.js"></script>
+
+	<!--****************  features   **************** -->
+	<script src="app/home/_module.js"></script>
+	<script src="app/home/home.js"></script>
+</body>
+
+</html>

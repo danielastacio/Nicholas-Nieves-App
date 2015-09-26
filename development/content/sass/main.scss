@@ -1,0 +1,16 @@
+$primaryColor: red; 
+
+
+h1 {
+	color: $primaryColor;
+	div {
+		color: red;
+		div {
+			color: red;
+			div {
+				color: red;
+			}
+		}
+	}
+} 
+

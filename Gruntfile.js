@@ -3,20 +3,20 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       angular: {
-        files: ['angular/appModule.js', 'angular/*/*.js'],
-        tasks: ['jshint', 'uglify']
+        files: ['development/app/**/.js'],
+        tasks: ['jshint']
       },
       grunt: {
         files: ['Gruntfile.js'],
         tasks: ['jshint']
       }, 
       sass: {
-        files: ['sass/*.sass', 'sass/*.scss'],
-        tasks: ['compass', 'cssbeautifier', 'cssmin']
+        files: ['development/content/sass/*.scss'],
+        tasks: ['compass', 'cssbeautifier']
       } 
     },
     jshint: {
-      files: ['Gruntfile.js', 'angular/appModule.js', 'angular/*/*.js'],
+      files: ['Gruntfile.js', 'development/app/**/*.js'],
       options: {
         globals: {
           jQuery: true
@@ -24,13 +24,13 @@ module.exports = function (grunt) {
       }
     },
     uglify: {
-      'angular/app.min.js': ['angular/appModule.js', 'angular/*/*.js']
+      'production/app.min.js': ['development/app/**/.js']
     },
     compass: {
       dist: {
         options: {
-          sassDir: 'sass',
-          cssDir: 'css',
+          sassDir: 'development/content/sass',
+          cssDir: 'development/content/css',
           outputStyle: 'nested',
           environment: 'production'
         }
@@ -38,13 +38,13 @@ module.exports = function (grunt) {
     },
     cssbeautifier: {
       files: [
-        'css/*.css'
+        'development/content/css/*.css'
       ] 
     },
     cssmin: {
       target: {
         files: {
-          'css/main.min.css': ['css/*.css']
+          'development/content/css/main.min.css': ['development/content/css/*.css']
         }
       }
     }
@@ -57,6 +57,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-cssbeautifier');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['jshint', 'uglify']);
+  grunt.registerTask('default', ['jshint']);
 
 };

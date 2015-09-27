@@ -3,9 +3,9 @@
 		.module('nick.app')
 		.controller('Site', controller);
 
-	controller.$inject = ['$scope', '$window'];
+	controller.$inject = ['$scope', '$window','viewportService'];
 
-	function controller($scope, $window) {
+	function controller($scope, $window, viewportService) {
 		var vm = this;
 		vm.assignClass = assignClass;
 		vm.view = null;
@@ -18,6 +18,8 @@
 			return $window.location.hash;
 
 		}, function (url) {
+			
+			viewportService.scrollToTop();
 
 			if (url === '#/') {
 				vm.view = 'Home';

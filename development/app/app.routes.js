@@ -6,6 +6,9 @@
 				.when('/', {
 					templateUrl: 'app/home/home.html'
 				})
+				.when('/writing', {
+					templateUrl: 'app/writing/writing.html'
+				})
 				.otherwise({
 					redirectTo: '/'
 				});

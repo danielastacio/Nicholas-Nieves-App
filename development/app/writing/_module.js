@@ -1,2 +1,2 @@
 angular
-	.module('nicholasNieves.writingPageModule', []);
+	.module('nick.app.writing', []);

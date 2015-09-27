@@ -1,9 +1,9 @@
 (function (){
 	angular
 		.module('nick.app.home')
-		.controller('Home', Home);
+		.controller('Home', controller);
 
-		function Home() {
+		function controller() {
 			var vm = this;
 			vm.greet = 'Welcome';
 		}

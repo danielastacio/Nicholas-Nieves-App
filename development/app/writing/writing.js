@@ -1,9 +1,9 @@
 (function () {
 	angular
-		.module('nicholasNieves.writingPageModule')
-		.controller('nicholasNieves.writingPageModule.writingPageController', writingPageController);
+		.module('nick.app.writing')
+		.controller('Writing', controller);
 
-		function writingPageController () {
+		function controller () {
 			var vm = this;
 			vm.message = "it works";
 		}

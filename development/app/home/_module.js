@@ -1,4 +1,2 @@
-(function (){
-	angular
-		.module('nick.app.home', []);
-})();
+angular
+	.module('nick.app.home', []);

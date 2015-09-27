@@ -1,4 +1,4 @@
 *.DS_Store
-
+*server.js
 *node_modules/
 

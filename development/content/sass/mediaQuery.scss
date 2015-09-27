@@ -30,6 +30,18 @@ section {
   z-index: 1 !important;
 }
 
+@font-face {
+  src: url(../fonts/Aileron-Thin.otf);
+  font-family: aileron; }
+@font-face {
+  src: url(../fonts/Aileron-Bold.otf);
+  font-family: aileronBold; 
+}
+body {
+  font-family: aileron;
+  margin: 0; 
+}
+
 @media all and (min-width: 150px) {
 
   [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -252,13 +264,13 @@ section {
                   }
 
                   .Facebook {
-                    background: url(../images/socialMedia/facebook.png) no-repeat;
+                    background: url(../images/socialMedia/facebook.jpg) no-repeat;
                     background-size: 50px;
 
                   }
 
                   .Instagram {
-                    background: black url(../images/socialMedia/instagram.png) no-repeat;
+                    background: black url(../images/socialMedia/instagram.jpg) no-repeat;
                     background-size: 50px;
                   }
 
@@ -267,27 +279,27 @@ section {
                   }
 
                   .Tumblr{
-                    background: url(../images/socialMedia/tumbler.png) no-repeat;
+                    background: url(../images/socialMedia/tumbler.jpg) no-repeat;
                     background-size: 50px;
                   }
 
                   .Youtube{
-                    background: url(../images/socialMedia/youtube.png) no-repeat;
+                    background: url(../images/socialMedia/youtube.jpg) no-repeat;
                     background-size: 50px;
                   }
 
                   .Twitter {
-                    background: url(../images/socialMedia/twitter.png) no-repeat;
+                    background: url(../images/socialMedia/twitter.jpg) no-repeat;
                     background-size: 50px;
                   }
 
                   .Linkedin {
-                    background: url(../images/socialMedia/linkedin.png) no-repeat;
+                    background: url(../images/socialMedia/linkedin.jpg) no-repeat;
                     background-size: 50px;
                   }
 
                   .Blogger {
-                    background: url(../images/socialMedia/blogger.png) no-repeat;
+                    background: url(../images/socialMedia/blogger.jpg) no-repeat;
                     background-size: 50px;
                   }
               }
@@ -547,6 +559,42 @@ section {
   /*------ Film View ---------------
   ---------------------------------- */
   @keyframes flash {
+    30% {
+      border-right: 1px solid rgb(250,0,0);
+      border-left: 1px solid rgb(250,0,0);
+    }
+    
+    70% {
+      border-right: 1px solid rgb(250,0,0);
+      border-left: 1px solid rgb(250,0,0);
+    }
+  }
+  
+  @-webkit-keyframes flash {
+    30% {
+      border-right: 1px solid rgb(250,0,0);
+      border-left: 1px solid rgb(250,0,0);
+    }
+    
+    70% {
+      border-right: 1px solid rgb(250,0,0);
+      border-left: 1px solid rgb(250,0,0);
+    }
+  } 
+  
+  @-moz-keyframes flash {
+    30% {
+      border-right: 1px solid rgb(250,0,0);
+      border-left: 1px solid rgb(250,0,0);
+    }
+    
+    70% {
+      border-right: 1px solid rgb(250,0,0);
+      border-left: 1px solid rgb(250,0,0);
+    }
+  } 
+  
+  @-o-keyframes flash {
     30% {
       border-right: 1px solid rgb(250,0,0);
       border-left: 1px solid rgb(250,0,0);
@@ -905,7 +953,7 @@ section {
       }
     }
 
-    .ContactMe {
+    .ContactMe { 
       padding: 10% 0;
       margin: 0 auto;
       width: 600px;

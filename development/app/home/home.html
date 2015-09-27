@@ -1,1 +1,57 @@
-<h1> This is the home view</h1>
+<section class="HomeView" ng-controller="Home as home">
+  <section class="DemoReel">
+    <h1>
+      Nicholas Nieves is the next best thing since sliced tomatoes.
+      Don't believe it? Check out his Demo reel.
+    </h1>
+      <figure class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/780smiEqmSc" frameborder="0" allowfullscreen></iframe>
+      </figure>
+  </section>
+  <section class="ContactMe">
+    <h1>Get in touch</h1>
+    <ul>
+      <li>Phone: 716-679-5407</li>
+      <li>Email: nicholas.nieves@ymail.com</li>
+    </ul>
+  <form class="ContactForm" name="home.contactForm" ng-submit="home.submitContact()" novalidate>
+    <h2>
+      <button type="button" class="plusMinus widget" toggle-Elm="plusMinus,field,SubmitContact"></button>
+      Or you can send me a message
+    </h2>
+    <div class="NameField field required" ng-class="{invalid: !home.contactForm.name.$valid}">
+      <div class="purpose">
+        <label>Your Name</label>
+        <div class="proof" ng-show="home.contactForm.$submitted && home.contactForm.name.$error.required">
+          * required
+        </div>
+      </div>
+      <div class="entry">
+        <input type="text" ng-model="home.input.name" name="name" required/> 
+      </div>
+    </div>
+    <div class="EmailField field required" ng-class="{invalid: !home.contactForm.email.$valid}">
+      <div class="purpose">
+        <label>Your Email</label>
+        <div class="proof" ng-show="home.contactForm.$submitted && home.contactForm.email.$error.required">
+          * required
+        </div>
+      </div>
+      <div class="entry">
+        <input type="email" ng-model="home.input.email" name="email" required/>
+      </div>
+    </div>
+    <div class="MessageField field required" ng-class="{invalid: !home.contactForm.message.$valid}">
+      <div class="purpose">
+        <label>Your Message</label>
+        <div class="proof" ng-show="home.contactForm.$submitted && home.contactForm.message.$error.required">
+          * required
+        </div>
+      </div>
+      <div class="entry">
+        <textarea rows="10" ng-model="home.input.message" name="message" required></textarea>
+      </div>
+    </div>
+    <input type="submit" class="SubmitContact" value="submit"/>
+  </form>  
+</section>

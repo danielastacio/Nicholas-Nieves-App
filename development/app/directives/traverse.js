@@ -110,15 +110,15 @@
 
                                 maxIdx = ulLists[i].children().length - 1;
 
-                                if (scope.filmCtrl.genre === 'Comedy' && ulLists[i].hasClass('Comedy')) {
+                                if (scope.film.genre === 'Comedy' && ulLists[i].hasClass('Comedy')) {
 
                                     targetUlList.push(ulLists[i]);
                                     traverseForward();
-                                } else if (scope.filmCtrl.genre === 'Drama' && ulLists[i].hasClass('Drama')) {
+                                } else if (scope.film.genre === 'Drama' && ulLists[i].hasClass('Drama')) {
 
                                     targetUlList.push(ulLists[i]);
                                     traverseForward();
-                                } else if (scope.filmCtrl.genre === 'Miscellaneous' && ulLists[i].hasClass('Miscellaneous')) {
+                                } else if (scope.film.genre === 'Miscellaneous' && ulLists[i].hasClass('Miscellaneous')) {
 
 
                                     targetUlList.push(ulLists[i]);
@@ -173,17 +173,17 @@
 
                                 maxIdx = ulLists[i].children().length - 1;
 
-                                if (scope.filmCtrl.genre === 'Comedy' && ulLists[i].hasClass('Comedy')) {
+                                if (scope.film.genre === 'Comedy' && ulLists[i].hasClass('Comedy')) {
 
                                     targetUlList.push(ulLists[i]);
                                     traverseBackwards();
 
-                                } else if (scope.filmCtrl.genre === 'Drama' && ulLists[i].hasClass('Drama')) {
+                                } else if (scope.film.genre === 'Drama' && ulLists[i].hasClass('Drama')) {
 
                                     targetUlList.push(ulLists[i]);
                                     traverseBackwards();
 
-                                } else if (scope.filmCtrl.genre === 'Miscellaneous' && ulLists[i].hasClass('Miscellaneous')) {
+                                } else if (scope.film.genre === 'Miscellaneous' && ulLists[i].hasClass('Miscellaneous')) {
 
 
                                     targetUlList.push(ulLists[i]);

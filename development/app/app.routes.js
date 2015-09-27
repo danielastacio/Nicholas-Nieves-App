@@ -9,6 +9,15 @@
 				.when('/writing', {
 					templateUrl: 'app/writing/writing.html'
 				})
+				.when('/gallery', {
+					templateUrl: 'app/gallery/gallery.html'
+				})
+				.when('/film', {
+					templateUrl: 'app/film/film.html'
+				})
+				.when('/resume', {
+					templateUrl: 'app/resume/resume.html'
+				})
 				.otherwise({
 					redirectTo: '/'
 				});

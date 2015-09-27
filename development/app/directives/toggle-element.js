@@ -6,6 +6,7 @@
       return {
         restrict: 'A',
         link: function (scope, element, attr) {
+
           var valueOfAttr = attr.toggleElm;
           var arrayOfAttr = attr.toggleElm.split(',');
           var allElemArray = [];

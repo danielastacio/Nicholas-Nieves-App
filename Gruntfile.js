@@ -3,7 +3,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       angular: {
-        files: ['development/app/**/.js'],
+        files: ['development/app/**/*.js'],
         tasks: ['jshint']
       },
       grunt: {

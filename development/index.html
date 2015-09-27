@@ -2,27 +2,87 @@
 <html lang="en" ng-app="nick.app" ng-controller="Site as site">
 
 <head>
-	<meta charset="utf-8" />
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="content/css/normalize.css" />
+    <link rel="stylesheet" href="content/css/mediaQuery.css" />
 </head>
 
 <body>
 
-	<h1>{{site.message}}</h1>
-	<div ng-view></div>
+    <header class="SiteHeader" ng-class="site.assignClass()">
+        <div class="Brand">
+            <div class="FullName">
+                <span class="enhance">Nicholas</span> Nieves
+            </div>
+            <div class="Skillset">
+                Actor. Writer. Storyteller.
+            </div>
+        </div>
+    </header>
+    <nav class="SiteNav">
+        <button type="button" class="Hamburger" toggle-Elm="SiteNavList">
+            &#9776; Menu
+        </button>
+        <ul class="SiteNavList">
+            <li><a href="#/">Home</a></li>
+            <li><a href="http://www.youtube.com/bbbkproductions" target="_blank">BBBk</a></li>
+            <li><a href="#/resume">Resume</a></li>
+            <li><a href="#/writing">Writing</a></li>
+            <li><a href="#/gallery">Gallery</a></li>
+            <li><a href="#/film">Film</a></li>
+        </ul>
+    </nav>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
+    <div ng-view=""></div>
 
-	<!--****************  app   **************** -->
+    <footer class="SiteFooter">
+        <nav class="SocialMediaLinks">
+            <ul>
+                <li><a target="_blank" href="https://www.facebook.com/profile.php?id=100009656860404&fref=ts" class="Facebook">Facebook</a></li>
 
-	<script src="app/app.module.js"></script>
-	<script src="app/app.routes.js"></script>
-	<script src="app/app.controller.js"></script>
+                <li><a target="_blank" href="https://www.youtube.com/channel/UCr4rnvh8i-lm7cP6ohtPZSg" class="Youtube">Youtube</a></li>
 
-	<!--****************  features   **************** -->
-	<script src="app/home/_module.js"></script>
-	<script src="app/home/home.js"></script>
+                <li><a target="_blank" href="https://instagram.com/nicknacknieves/" class="Instagram">Instagram</a></li>
+
+                <li><a target="_blank" href="http://nicholasnieves.tumblr.com/" class="Tumblr">Tumblr</a></li>
+
+                <li><a target="_blank" href="https://twitter.com/nicknacknieves" class="Twitter">Twitter</a></li>
+
+                <li><a target="_blank" href="http://nicholasnieves.blogspot.com/" class="Blogger">Blogger</a></li>
+
+                <li><a target="_blank" href="https://www.linkedin.com/in/nicholasnieves" class="Linkedin">Linkedin</a></li>
+            </ul>
+        </nav>
+        <div class="Credits">
+            <p>Nicholas Nieves</p>
+            <p>Designed by Dastacio Designs</p>
+        </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
+
+    <!--****************  app  **************** -->
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/app.controller.js"></script>
+
+    <!--****************  features   **************** -->
+    <script src="app/home/_module.js"></script>
+    <script src="app/film/_module.js"></script>
+    <script src="app/home/home.js"></script>
+    <script src="app/film/film.js"></script>
+    
+
+    <!--****************  directives  **************** -->
+    <script src="app/directives/_module.js"></script>
+    <script src="app/directives/toggle-element.js"></script>
+    <script src="app/directives/traverse.js"></script>
 </body>
 
 </html>

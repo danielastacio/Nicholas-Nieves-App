@@ -1,0 +1,1109 @@
+ /* Media Queries */
+
+/* Mixins */
+
+@mixin vendor-prefix($name, $argument...) {
+  #{$name}: #{$argument};
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+}
+
+@mixin VisuallyHidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Variables */
+
+$PrimaryRed: rgb(140,0,0);
+
+section {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+@media all and (min-width: 150px) {
+
+  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+  }
+
+
+.ng-submitted .invalid input, .ng-submitted .invalid textarea { 
+  background-color: pink;
+  border: none;
+}
+
+.ng-submitted .ng-invalid {
+  -moz-transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+
+  /*------ Widget Styles ---------------
+  ---------------------------------- */
+  button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+  }
+
+  .plusMinus {
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 9px;
+    margin-right: 10px;
+    background: url(../images/widgets/plus.png) no-repeat;
+    background-size: 18px;
+    @include vendor-prefix(transition, .2s);
+  }
+
+  .plusMinus:focus {
+    outline: none;
+  }
+
+  .plusMinus.toggled {
+    background: url(../images/widgets/minus.png) no-repeat;
+  }
+
+  button.DownloadPdf {
+    display: block;
+    margin: 0 auto;
+    padding: 40px;
+    position: relative;
+  }
+
+  button.DownloadPdf a {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 0 20px;
+    line-height: 2em;
+    font-size: 18px;
+    @include vendor-prefix(box-shadow, rgb(88,0,0) 0 10px 0 0);
+    @include vendor-prefix(border-radius, 5px);
+  }
+
+  button.DownloadPdf a:active {
+    @include vendor-prefix(box-shadow, rgb(88,0,0) 0 5px 0 0);
+    @include vendor-prefix(transform, translateY(5px));
+  }
+
+  /*------ Home View ---------------
+  ---------------------------------- */
+
+  .Home {
+    background: url(../images/banners/Casual.png) 40% 0 no-repeat;
+    background-size: 33.333333%;
+  }
+
+  .Writing {
+    background: url(../images/banners/Corny.png) 45% 0 no-repeat;
+    background-size: 33.333333%;
+  }
+
+  .Film {
+    background: url(../images/banners/Eccentric.png) 50% 0 no-repeat;
+    background-size: 33.333333%;
+  }
+
+  .Resume {
+    background: url(../images/banners/Vogue.png) 57% 0 no-repeat;
+    background-size: 33.333333%;
+  }
+
+  .Gallery {
+    background: url(../images/banners/Thunder.png) 45% 0 no-repeat;
+    background-size: 33.333333%;
+  }
+
+  .SiteHeader {
+    text-transform: uppercase;
+  }
+
+  .SiteHeader .Brand {
+    margin: 0 auto;
+    padding: 23.333333% 0 10px;
+    margin: 10% 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .SiteHeader .Brand .Skillset {
+    font-size: 17px;
+    width: 240px;
+    margin: 0 auto;
+
+  }
+
+  .SiteHeader .Brand .FullName {
+    font-size: 32px;
+    width: 275px;
+    margin: 0 auto;
+  }
+
+  .SiteHeader .Brand .FullName .enhance{
+    font-family: aileronBold;
+  }
+   
+  .SiteNav {
+    width: 100%;
+    background: url(../images/navBack.png) repeat;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+
+    .Hamburger {
+      // text-indent: -9999px;
+      @include vendor-prefix(box-shadow, rgb(88,0,0) 0 10px 0 0);
+      @include vendor-prefix(border-radius, 0 0 5px 5px);
+      border: none;
+      background: url(../images/navBack.png) repeat;
+      font-size: 25px;
+      display: inline-block;
+    }
+
+    .Hamburger:focus {
+      outline: none;
+    }
+
+    .Hamburger:active {
+      @include vendor-prefix(box-shadow, rgb(88,0,0) 0 5px 0 0);
+      @include vendor-prefix(transform, translateY(5px));
+    }
+
+    .SiteNavList, .SiteNavList.toggled{ 
+      list-style: none;
+      text-align: left;
+      @include VisuallyHidden;
+
+      li {
+        display: block;
+
+          a {
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            @include vendor-prefix(transition, all .4s);
+
+          }
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .SiteNavList.toggled {
+        position: relative;
+        height: auto;
+        overflow: initial;
+        padding: 20px 0;
+        margin: 0 auto;
+        width: 100px;
+      }
+  }
+
+  .SiteFooter {
+    width: 100%;
+
+      .SocialMediaLinks { 
+        padding: 60px 0 70px;
+        background-color: white;
+        position: relative;
+        z-index: 1;
+
+          ul {
+            list-style: none;
+            padding: 0;
+            width: 250px;
+            margin: 0 auto;
+
+              li {
+                display: inline-block;
+                padding: 15px;
+
+                  a {
+                    display: block;
+                    text-indent: -9999px;
+                    width: 50px;
+                    height: 48px;
+                    background-size: 50px;
+                    @include vendor-prefix(box-shadow, rgb(110,0,0) 0 10px 0 0);
+                    @include vendor-prefix(border-radius, 5px);
+                  }
+
+                  a:active {
+                    @include vendor-prefix(box-shadow, rgb(110,0,0) 0 5px 0 0);
+                    @include vendor-prefix(transform, translateY(5px));
+                  }
+
+                  .Facebook {
+                    background: url(../images/socialMedia/facebook.png) no-repeat;
+                    background-size: 50px;
+
+                  }
+
+                  .Instagram {
+                    background: black url(../images/socialMedia/instagram.png) no-repeat;
+                    background-size: 50px;
+                  }
+
+                  .Instagram:hover {
+                    background-size: 50px;
+                  }
+
+                  .Tumblr{
+                    background: url(../images/socialMedia/tumbler.png) no-repeat;
+                    background-size: 50px;
+                  }
+
+                  .Youtube{
+                    background: url(../images/socialMedia/youtube.png) no-repeat;
+                    background-size: 50px;
+                  }
+
+                  .Twitter {
+                    background: url(../images/socialMedia/twitter.png) no-repeat;
+                    background-size: 50px;
+                  }
+
+                  .Linkedin {
+                    background: url(../images/socialMedia/linkedin.png) no-repeat;
+                    background-size: 50px;
+                  }
+
+                  .Blogger {
+                    background: url(../images/socialMedia/blogger.png) no-repeat;
+                    background-size: 50px;
+                  }
+              }
+          }
+      }
+    .Credits {
+      padding: 15px;
+      background: url(../images/navBack.png) repeat;
+
+      p {
+        color: white;
+        margin: 0;
+        text-align: center;
+        padding: 3px;
+      }
+    }
+  }
+
+  .HomeView {
+    background-color: black;
+    color: white;
+    padding: 10% 10% 0 10%;
+
+    .DemoReel {
+      h1 {
+        padding-bottom: 10%;
+        margin: 0;
+        font-size: 25px;
+      }
+
+      .video{
+        margin: 0;
+
+        iframe {
+          width: 100%;
+        }
+      }
+    }
+
+    .ContactMe {
+      padding: 10% 0;
+      margin: 0 auto;
+      width: 250px;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 250px;
+      }
+
+      h1 {
+        padding: 0;
+        margin: 0;
+      }
+
+      .ContactForm {
+      text-align: center;
+
+        h2 {
+          margin: 0;
+          text-align: center;
+          padding: 10% 0;
+          font-size: 17px;
+        }
+
+        .field {
+          @include VisuallyHidden;
+          @include vendor-prefix(transition, all .4s);
+        }
+
+        .field.toggled {
+          position: relative;
+          margin: 0 auto;
+          height: auto;
+          overflow: initial;
+          width: 100%;
+          @include vendor-prefix(transform, rotate(360deg));
+        }
+
+        .purpose {
+          padding: 20px;
+        }
+
+        .entry {
+
+          input {
+            color: black;
+            width: 100%;
+          }
+
+          textarea {
+            resize: vertical;
+            width: 100%;
+            color: black;
+          } // End of Text Area
+        } // End of Entry
+
+        .SubmitContact {
+          padding: 10px 30px;
+          border: none;
+          margin-top: 40px;
+          background-color: rgb(140,0,0);
+          @include vendor-prefix(box-shadow, rgb(88,0,0) 0 10px 0 0);
+          @include vendor-prefix(border-radius, 9px);
+          @include vendor-prefix(transition, all .4s);
+          @extend .field;
+
+        }
+
+        .SubmitContact.toggled {
+          position: relative;
+          height: auto;
+          overflow: initial;
+          width: 100%;
+          padding: 10px 30px;
+          margin-top: 40px;
+          @include vendor-prefix(transform, rotate(360deg));
+        }
+
+        .SubmitContact:focus {
+          outline: none;
+        }
+
+        .SubmitContact:active {
+          @include vendor-prefix(box-shadow, rgb(88,0,0) 0 3px 0 0);
+          @include vendor-prefix(transform, translateY(5px));
+        }
+      } // End of ContactForm
+    } // End of ContactMe
+  } // End of Home Area
+
+  /*------ Writing View ---------------
+  ---------------------------------- */
+
+  .WritingView {
+    background-color: black;
+    color: white;
+    padding: 5%;
+
+    article.StartingToday {
+      padding: 5% 0;
+      margin: 0 auto;
+      max-width: 540px;
+      @include vendor-prefix(box-shadow, none);
+
+      h1 {
+        margin: 0;
+        padding: 0;
+        background: none;
+        box-shadow: none;
+        text-align: left;
+      }
+
+      p.snippet {
+        overflow: auto;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        line-height: 2em;
+        text-align: left;
+        letter-spacing: 1.2px;
+        text-indent: 0;
+      }
+    }
+
+    article {
+
+      margin: 10px 5px;
+      padding: 50px 20px 20px;
+      @include vendor-prefix(box-shadow, white 0 0 1px 0);
+
+      h1 {
+        margin: 0;
+        padding: 20px;
+        font-size: 25px;
+        text-align: center;
+        cursor: pointer;
+        background: url(../images/SadNick.jpg) 50% 0 no-repeat;
+        background-attachment: fixed;
+        @include vendor-prefix(transition, all .1s);
+        @include vendor-prefix(box-shadow, inset 0 0 0 1000px rgba(40,40,40,0.5));
+      }
+
+      h1:active {
+        letter-spacing: 2px;
+      }
+
+      .plusMinus {
+        margin: 20px 0 0;
+      }
+
+      p.snippet:first-of-type {
+        margin-top: 30px;
+      }
+
+      p.snippet {
+        text-indent: 2em;
+        @include VisuallyHidden;
+        @include vendor-prefix(transition, .4s);
+
+      }
+
+      p.snippet.toggled {
+        overflow: auto;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        line-height: 2em;
+        text-align: justify;
+      }
+
+      aside {
+        @include VisuallyHidden;
+        button {
+          display: block;
+        }
+
+        button a{
+          background-color: white;
+          color: black;
+          text-decoration: none;
+          display: block;
+          line-height: 2em;
+          font-size: 18px;
+          @include vendor-prefix(box-shadow, rgb(88,0,0) 0 10px 0 0);
+          @include vendor-prefix(border-radius, 5px);
+          @include VisuallyHidden;
+        }
+
+        button.toggled a, button.viewStartingToday a {
+          overflow: auto;
+          position: relative;
+          width: 114px;
+          height: 37px;
+          margin: 30px 0;
+        }
+
+        button a:active {
+          @include vendor-prefix(box-shadow, rgb(88,0,0) 0 5px 0 0);
+          @include vendor-prefix(transform, translateY(5px));
+        }
+      } //End of aside 
+      aside.toggled, aside.viewStartingToday {
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 0;
+        padding-top: 30px;
+      }
+    }
+  } // End of writing view
+
+  /*------ Film View ---------------
+  ---------------------------------- */
+  @keyframes flash {
+    30% {
+      border-right: 1px solid rgb(250,0,0);
+      border-left: 1px solid rgb(250,0,0);
+    }
+    
+    70% {
+      border-right: 1px solid rgb(250,0,0);
+      border-left: 1px solid rgb(250,0,0);
+    }
+  } 
+
+  .FilmView {
+    background-color: black;
+    color: white;
+    padding: 60px 5%;
+
+    .Highlights { 
+      padding: 25px;
+      border-right: 1px solid rgb(0,0,0);
+      border-left: 1px solid rgb(0,0,0);
+      @include vendor-prefix(animation, flash 6s infinite);
+      @include vendor-prefix(border-radius, 500px 0px 400px 0px);
+
+      h1 {
+        margin: 0;
+        text-align: center;
+      } //end of h1  
+    } // end of Highlights
+
+    .VideoGenres {
+      padding: 25px;
+      margin-top: 25px;
+      border-right: 1px solid rgb(0,0,0);
+      border-left: 1px solid rgb(0,0,0);
+      @include vendor-prefix(animation, flash 6s infinite);
+      @include vendor-prefix(border-radius, 500px 0px 400px 0px);
+
+      nav {
+        ul {
+          list-style: none;
+          text-align: center;
+          padding: 0;
+
+          li {
+            display: inline-block;
+            padding: 20px;
+            @include vendor-prefix(transition, 0.3s);
+          }
+
+          li:hover {
+            background: rgb(140,0,0) url(../images/navBack.png);
+            cursor: pointer;
+          }
+
+          .current {
+            background: rgb(140,0,0) url(../images/navBack.png);
+          }
+        }
+      }
+    }
+    .carousel {
+      overflow: hidden;
+
+      ul {  
+        list-style: none;
+        padding: 0;
+        overflow: auto;
+        position: relative;
+        left: 0%;
+
+        li {
+          float: left;
+
+          figure.video {
+            margin: 0;
+
+            iframe {
+              width: 100%;
+              max-width: 640px;
+              height: 300px;
+            } // end of iframe
+          } // end of figure
+        } // end of list
+      } // end of ul
+
+      .HighlightsList {
+        width: 200%;
+
+        li {
+          width: 50%;
+        }
+      }
+
+      .Comedy {
+        width: 500%;
+
+        li {
+          width: 20%;
+        }
+      }
+
+      .Drama {
+        width: 500%;
+
+        li {
+          width: 20%;
+        }
+      }
+
+      .Miscellaneous {
+        width: 400%;
+
+        li {
+          width: 25%;
+        }
+      }
+
+      .prevButton {
+        float: left;
+        margin: 0;
+        background-color: rgb(140,0,0);
+        font-size: 50px;
+        padding: 0 20px 0 10px;
+        @include vendor-prefix(box-shadow, rgb(80,0,0) 8px 5px 0px 0px);
+        @include vendor-prefix(transition, all 0.1s);
+        @include vendor-prefix(border-radius, 5px);
+      }
+
+      .prevButton:active {
+        @include vendor-prefix(box-shadow, rgb(80,0,0) 0 0 0 0);
+      }
+
+      .nextButton {
+        float: right;
+        background-color: rgb(140,0,0);
+        font-size: 50px;
+        padding: 0 15px 0 20px;
+        margin-bottom: 5px;
+        @include vendor-prefix(box-shadow, rgb(80,0,0) -8px 5px 0px 0px);
+        @include vendor-prefix(transition, all 0.1s);
+        @include vendor-prefix(border-radius, 5px);
+      }
+
+      .nextButton:active {
+        @include vendor-prefix(box-shadow, rgb(80,0,0) 0 0 0 0);
+      }
+    } // end of carousel
+  } // end of FilmView
+
+/*  --------- Resume View --------------
+----------- - - - - - - - - - --    ---*/
+
+  .ResumeView {
+    background-color: white;
+
+    figure.Resume {
+      margin: 0 auto;
+      margin-bottom: -4px;
+
+      img {
+        width: 100%;
+        max-width: 1000px;
+      }
+    }
+  }
+
+  .GalleryView {
+    background-color: black;
+    padding: 60px;
+
+    .carousel {
+      overflow: hidden;
+      margin: 0 auto;
+      max-width: 900px;
+
+      h1 {
+        color: white;
+        text-align: center;
+      }
+
+      ul.Headshots {  
+        list-style: none;
+        padding: 0;
+        overflow: auto;
+        position: relative;
+        left: 0%;
+        width: 400%;
+
+        li {
+          float: left;
+          width: 25%;
+
+          figure {
+            margin: 0;
+
+            img {
+              width: 100%;
+              max-width: 900px;
+            } // end of iframe
+          } // end of figure
+        } // end of list
+      } // end of ul
+
+      ul.Pictures {  
+        list-style: none;
+        padding: 0;
+        overflow: auto;
+        position: relative;
+        left: 0%;
+        width: 500%;
+
+        li {
+          float: left;
+          width: 20%;
+
+          figure {
+            margin: 0;
+
+            img {
+              width: 100%;
+              max-width: 900px;
+            } // end of iframe
+          } // end of figure
+        } // end of list
+      } // end of ul
+
+      .prevButton {
+        float: left;
+        margin: 0;
+        background-color: rgb(140,0,0);
+        font-size: 50px;
+        color: white;
+        padding: 0 20px 0 10px;
+        @include vendor-prefix(box-shadow, rgb(80,0,0) 8px 5px 0px 0px);
+        @include vendor-prefix(transition, all 0.1s);
+        @include vendor-prefix(border-radius, 5px);
+      }
+
+      .prevButton:active {
+        @include vendor-prefix(box-shadow, rgb(80,0,0) 0 0 0 0);
+      }
+
+      .nextButton {
+        float: right;
+        color: white;
+        background-color: rgb(140,0,0);
+        font-size: 50px;
+        padding: 0 15px 0 20px;
+        margin-bottom: 5px;
+        @include vendor-prefix(box-shadow, rgb(80,0,0) -8px 5px 0px 0px);
+        @include vendor-prefix(transition, all 0.1s);
+        @include vendor-prefix(border-radius, 5px);
+      }
+
+      .nextButton:active {
+        @include vendor-prefix(box-shadow, rgb(80,0,0) 0 0 0 0);
+      }
+    } // end of carousel
+  }
+
+} //End Of min-width: 150px
+
+
+@media all and (min-width: 730px) {
+
+  .Home {
+    background: url(../images/banners/Casual.png) 100% 20% no-repeat fixed;
+    background-size: 73.333333%;
+  }
+
+  .Writing {
+    background: url(../images/banners/Corny.png) 100% 24% no-repeat fixed;
+    background-size: 73.333333%;
+  }
+
+  .Film {
+    background: url(../images/banners/Eccentric.png) 100% 24% no-repeat fixed;
+    background-size: 73.333333%;
+  }
+
+  .Resume {
+    background: url(../images/banners/Vogue.png) 100% 24% no-repeat fixed;
+    background-size: 73.333333%;
+  }
+
+  .Gallery {
+    background: url(../images/banners/Thunder.png) 100% 24% no-repeat fixed;
+    background-size: 73.333333%;
+  }
+
+  .SiteHeader {
+    padding: 20% 0 10%;
+
+    .Brand {
+      padding: 110px 0px;
+      font-size: 40px;
+      width: 600px;
+      margin: 0 auto;
+
+      .FullName {
+        font-size: 40px;
+        width: 600px;
+        margin-top: -60px;
+        position: fixed;
+        z-index: -1;
+      }
+      .Skillset {
+        font-size: 20px;
+        width: 540px;
+        position: fixed;
+        margin: -10px 0 0 25px;
+        z-index: -1;
+      }
+    }
+  }
+
+
+  .SiteNav {
+    .Hamburger {
+    @include VisuallyHidden;
+    }
+
+    .SiteNavList, .SiteNavList.toggled {
+
+      position: relative;
+      margin: 0 auto;
+      padding: 0;
+      height: auto;
+      overflow: initial;
+      width: 460px;
+
+      li {
+        display: inline-block;
+        padding-right: 20px;
+
+        a {
+          font-size: 20px !important;
+        }
+      }
+    }
+  }
+
+  .HomeView {
+    .DemoReel {
+
+      width: 600px;
+      margin: 0 auto;
+
+      h1 {
+        width: 450px;
+        font-size: 25px;
+      }
+
+      .video {
+        margin: 0 auto;
+      }
+    }
+
+    .ContactMe {
+      padding: 10% 0;
+      margin: 0 auto;
+      width: 600px;
+
+      h1 {
+        font-size: 35px;
+      }
+
+      ul {
+        width: 100%;
+
+        li {
+          font-size: 25px;
+        }
+      }
+      .ContactForm  {
+      
+        h2 {
+          padding: 10% 0 5%;
+          font-size: 25px;
+        }
+
+        .entry {
+
+          input {
+            width: 300px;
+            height: 40px;
+            margin: 0 auto;
+            text-indent: 2em;
+          }
+        }
+
+        textarea {
+          width: 500px;
+          margin: 0 auto;
+        }
+
+        .SubmitContact, .SubmitContact.toggled {
+          width: 190px;
+        }
+      }
+    }
+  }
+
+  .SiteFooter .SocialMediaLinks ul {
+    width: 580px;
+  }
+
+
+  /*------ Film View ---------------
+  ---------------------------------- */
+
+  .FilmView .carousel {
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  .FilmView .carousel ul li figure.video iframe {
+    height: 360px;
+  }
+
+} // end of min-width 730px
+
+@media all and (min-width: 1000px) {
+
+  .Home {
+    background: url(../images/banners/Casual.png) 100% 20px no-repeat fixed;
+    background-size: 935px;
+  }
+
+  .Writing {
+    background: url(../images/banners/Corny.png) 100% 60px no-repeat fixed;
+    background-size: 935px;
+  }
+
+  .Film {
+    background: url(../images/banners/Eccentric.png) 100% 60px no-repeat fixed;
+    background-size: 935px;
+  }
+
+  .Resume {
+    background: url(../images/banners/Vogue.png) 100% 60px no-repeat fixed;
+    background-size: 935px;
+  }
+
+  .Gallery {
+    background: url(../images/banners/Thunder.png) 100% 60px no-repeat fixed;
+    background-size: 935px;
+  }
+
+  .SiteHeader {
+      height: 660px;
+      margin-top: 8px;
+      padding: 10px 0;
+
+      .Brand {
+        padding: 260px 0;
+        width: 935px;
+        margin: 0 auto;
+
+        .FullName {
+          margin: 0;
+        }
+      }
+  }
+
+  .SiteHeader .Brand .Skillset {
+    font-size: 30px;
+    width: 870px;
+    margin: 70px 0 0 45px;
+    position: fixed;
+    z-index: -1;
+  }
+
+  .SiteHeader .Brand .FullName {
+    font-size: 60px;
+    width: 950px;
+    position: fixed;
+    z-index: -1;
+  }
+
+  .SiteNav {
+      padding: 20px 0;
+      margin-top: -10px;
+  }
+
+  .HomeView {
+    padding: 60px 60px 0 60px;
+  }
+
+  .HomeView .ContactMe {
+    width: 810px;
+    padding: 60px 0;
+  }
+
+  .HomeView .DemoReel {
+    width: 850px;
+
+    h1 {
+      font-size: 35px;
+      width: 570px;
+    }
+  }
+
+  .HomeView .ContactMe .ContactForm h2 {
+    padding: 50px 0 0 0;
+  }
+
+  .SiteFooter .SocialMediaLinks {
+    padding: 60px 0 70px;
+
+    ul {
+      width: 580px;
+    }
+  }
+
+  .WritingView {
+    padding: 60px;
+
+    article.StartingToday {
+      padding: 0 0 40px;
+    }
+
+    article {
+      width: 850px;
+      margin: 10px auto;
+
+      h1 {
+        font-size: 40px;
+      }
+
+      p.snippet.toggled {
+        font-size: 25px;
+      }
+    }
+  }
+
+  /*------ Film View ---------------
+  ---------------------------------- */
+  .FilmView {
+    .Highlights {
+      margin: 0 auto;
+      width: 900px;
+      padding: 25px 0;
+    }
+    .VideoGenres {
+      margin: 25px auto 0;
+      width: 900px;
+      padding: 25px 0;
+    }
+  }
+
+/*  --------- Resume View --------------
+----------- - - - - - - - - - --    ---*/
+
+.ResumeView figure.Resume {
+  width: 1000px;
+}
+
+} // End of min-width: 1000px
+

@@ -17,9 +17,6 @@
 				})
 				.when('/resume', {
 					templateUrl: 'app/resume/resume.html'
-				})
-				.otherwise({
-					redirectTo: '/'
 				});
 			}]);
 })();

@@ -3,7 +3,7 @@ var connect = require('connect'),
 
 var app = connect();
 
-app.use(serveStatic('development'));
+app.use(serveStatic('src'));
 app.listen(5000);
 
 console.log('You are connected to port 5000')

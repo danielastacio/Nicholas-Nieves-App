@@ -112,27 +112,37 @@ body {
   /*------ Home View ---------------
   ---------------------------------- */
     .Home {
-        background: url(../images/banners/Casual.png) 40% 0 no-repeat;
+        
+        background-repeat: no-repeat;
+        background-position: 40% 0;
         background-size: 33.333333%;
     }
 
     .Writing {
-        background: url(../images/banners/Corny.png) 45% 0 no-repeat;
+        
+        background-repeat: no-repeat;
+        background-position: 45% 0;
         background-size: 33.333333%;
     }
 
     .Film {
-        background: url(../images/banners/Eccentric.png) 50% 0 no-repeat;
+        
+        background-repeat: no-repeat;
+        background-position: 50% 0;
         background-size: 33.333333%;
     }
 
     .Resume {
-        background: url(../images/banners/Vogue.png) 57% 0 no-repeat;
+        
+        background-repeat: no-repeat;
+        background-position: 57% 0;
         background-size: 33.333333%;
     }
 
     .Gallery {
-        background: url(../images/banners/Thunder.png) 45% 0 no-repeat;
+        
+        background-repeat: no-repeat;
+        background-position: 45% 0;
         background-size: 33.333333%;
     }
 
@@ -1062,27 +1072,42 @@ body {
 
 @media all and (min-width: 730px) {
     .Home {
-        background: url(../images/banners/Casual.png) 100% 20% no-repeat fixed;
+        
+        background-repeat: no-repeat;
+        background-position: 100% 20%;
+        background-attachment: fixed;
         background-size: 73.333333%;
     }
 
     .Writing {
-        background: url(../images/banners/Corny.png) 100% 24% no-repeat fixed;
+        
+        background-repeat: no-repeat;
+        background-position: 100% 24%;
+        background-attachment: fixed;
         background-size: 73.333333%;
     }
 
     .Film {
-        background: url(../images/banners/Eccentric.png) 100% 24% no-repeat fixed;
+        
+        background-repeat: no-repeat;
+        background-position: 100% 24%;
+        background-attachment: fixed;
         background-size: 73.333333%;
     }
 
     .Resume {
-        background: url(../images/banners/Vogue.png) 100% 24% no-repeat fixed;
+        
+        background-repeat: no-repeat;
+        background-position: 100% 24%;
+        background-attachment: fixed;
         background-size: 73.333333%;
     }
 
     .Gallery {
-        background: url(../images/banners/Thunder.png) 100% 24% no-repeat fixed;
+        
+        background-repeat: no-repeat;
+        background-position: 100% 24%;
+        background-attachment: fixed;
         background-size: 73.333333%;
     }
 
@@ -1213,27 +1238,37 @@ body {
 
 @media all and (min-width: 1000px) {
     .Home {
-        background: url(../images/banners/Casual.png) 100% 20px no-repeat fixed;
+        background-repeat: no-repeat;
+        background-position: 100% 20px;
+        background-attachment: fixed;
         background-size: 935px;
     }
 
     .Writing {
-        background: url(../images/banners/Corny.png) 100% 60px no-repeat fixed;
+        background-repeat: no-repeat;
+        background-position: 100% 60px;
+        background-attachment: fixed;
         background-size: 935px;
     }
 
     .Film {
-        background: url(../images/banners/Eccentric.png) 100% 60px no-repeat fixed;
+        background-repeat: no-repeat;
+        background-position: 100% 60px;
+        background-attachment: fixed;
         background-size: 935px;
     }
 
     .Resume {
-        background: url(../images/banners/Vogue.png) 100% 60px no-repeat fixed;
+        background-repeat: no-repeat;
+        background-position: 100% 60px;
+        background-attachment: fixed;
         background-size: 935px;
     }
 
     .Gallery {
-        background: url(../images/banners/Thunder.png) 100% 60px no-repeat fixed;
+        background-repeat: no-repeat;
+        background-position: 100% 60px;
+        background-attachment: fixed;
         background-size: 935px;
     }
 

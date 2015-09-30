@@ -8,14 +8,14 @@
 	function controller($scope, $window, viewportService) {
 		var vm = this;
 		vm.assignClass = assignClass;
-		vm.view = 'null';
+		vm.view = null;
 
 		vm.banners = {
-			home: 'http://localhost:5000/content/images/banners/Casual.png',
-			resume: 'http://localhost:5000/content/images/banners/Vogue.png',
-			writing: 'http://localhost:5000/content/images/banners/Corny.png',
-			film: 'http://localhost:5000/content/images/banners/Eccentric.png',
-			gallery: 'http://localhost:5000/content/images/banners/Thunder.png',
+			home: 'content/images/banners/Casual.png',
+			resume: 'content/images/banners/Vogue.png',
+			writing: 'content/images/banners/Corny.png',
+			film: 'content/images/banners/Eccentric.png',
+			gallery: 'content/images/banners/Thunder.png',
 
 		};
 

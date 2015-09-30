@@ -5,7 +5,7 @@
 		
 	controller.$inject = ['$http'];
 
-	function controller() {
+	function controller($http) {
 		var vm = this;
 		vm.input = {};
 		vm.submitContact = submitContact;

@@ -1,36 +1,47 @@
 module.exports = function (grunt) {
 
+
   grunt.initConfig({
+    connect: {
+      server: {
+        options: {
+          port: 5000,
+          base: 'src',
+          keepalive: true
+        }
+      },
+    },
     watch: {
       angular: {
-        files: ['development/app/**/*.js'],
+        files: ['src/app/**/*.js'],
         tasks: ['jshint']
       },
       grunt: {
         files: ['Gruntfile.js'],
         tasks: ['jshint']
-      }, 
+      },
       sass: {
-        files: ['development/content/sass/*.scss'],
+        files: ['src/content/sass/*.scss'],
         tasks: ['compass', 'cssbeautifier']
-      } 
+      }
     },
     jshint: {
-      files: ['Gruntfile.js', 'development/app/**/*.js'],
+      files: ['Gruntfile.js', 'src/app/**/*.js'],
       options: {
         globals: {
           jQuery: true
         }
       }
     },
+
     uglify: {
-      'production/app.min.js': ['development/app/**/.js']
+      'production/app.min.js': ['src/app/**/.js']
     },
     compass: {
       dist: {
         options: {
-          sassDir: 'development/content/sass',
-          cssDir: 'development/content/css',
+          sassDir: 'src/content/sass',
+          cssDir: 'src/content/css',
           outputStyle: 'nested',
           environment: 'production'
         }
@@ -38,22 +49,24 @@ module.exports = function (grunt) {
     },
     cssbeautifier: {
       files: [
-        'development/content/css/*.css'
-      ] 
+        'src/content/css/*.css'
+      ]
     },
     cssmin: {
       target: {
         files: {
-          'development/content/css/main.min.css': ['development/content/css/*.css']
+          'src/content/css/main.min.css': ['src/content/css/*.css']
         }
       }
     }
   });
 
+
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-cssbeautifier');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 

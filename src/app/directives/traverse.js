@@ -21,7 +21,7 @@
     
                         for (var i = 0; i < element.children().length; i++) {
     
-                            /* 	Check the children of the element that has this directive
+                            /*  Check the children of the element that has this directive
                             to see if there is more than one unordered list (<ul>). If so,
                             they will be pushed into an array so that they can be traversed
                             invidually. 
@@ -89,7 +89,7 @@
                                     });
     
                                 } // end of inner else
-                            } // end of traverseForward	
+                            } // end of traverseForward 
     
                             if (ulLists.length === 1) {
     
@@ -102,7 +102,7 @@
     
                                 /* ---------------------------------------------------------------------------- */
     
-                                /* 	Make sure to reset "targetUlList" array to prevent the user from creating duplicates
+                                /*  Make sure to reset "targetUlList" array to prevent the user from creating duplicates
                                     of the same unordered list.
                                 */
                                 targetUlList.splice(0, 1);
@@ -147,7 +147,7 @@
     
                                 } // end of if
                                 else {
-    
+
                                     idx -= 1;
                                     position -= 100;
     
@@ -159,15 +159,17 @@
                             } // end of traverseBackwards
     
                             if (ulLists.length === 1) {
-    
+
+                                maxIdx = ulLists[0].children().length - 1;
+
                                 targetUlList.push(ulLists[0]);
                                 traverseBackwards();
                             } // end of if
                             else {
+
+                                /* --------------------------------------------------------------------------- */
     
-                                /* ---------------------------------------------------------------------------- */
-    
-                                /* 	Make sure to reset "targetUlList" array to prevent the user from creating duplicates
+                                /*  Make sure to reset "targetUlList" array to prevent the user from creating duplicates
                                     of the same unordered list.
                                 */
                                 targetUlList.splice(0, 1);

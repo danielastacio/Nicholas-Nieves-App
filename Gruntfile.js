@@ -35,7 +35,12 @@ module.exports = function (grunt) {
     },
 
     uglify: {
-      'production/app.min.js': ['src/app/**/.js']
+      'dest/js/app.min.js': [
+        'src/app/app.module.js',
+        'src/app/app.routes.js',
+        'src/app/app.controller.js',
+        'src/app/**/*.js'
+        ]
     },
     compass: {
       dist: {
@@ -55,7 +60,7 @@ module.exports = function (grunt) {
     cssmin: {
       target: {
         files: {
-          'src/content/css/main.min.css': ['src/content/css/*.css']
+          'dest/css/main.min.css': ['src/content/css/*.css']
         }
       }
     }
@@ -71,5 +76,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('build', ['jshint','uglify', 'cssmin']);
+  
 
 };

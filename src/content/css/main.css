@@ -1,0 +1,1399 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/* Media Queries */
+/* Mixins */
+/* Variables */
+section {
+  position: relative !important;
+  z-index: 1 !important; }
+
+@font-face {
+  src: url(../fonts/Aileron-Thin.otf);
+  font-family: aileron; }
+@font-face {
+  src: url(../fonts/Aileron-Bold.otf);
+  font-family: aileronBold; }
+body {
+  font-family: aileron;
+  margin: 0; }
+
+@media all and (min-width: 150px) {
+  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important; }
+
+  .ng-submitted .invalid input, .ng-submitted .invalid textarea {
+    background-color: pink;
+    border: none; }
+
+  .ng-submitted .ng-invalid {
+    -moz-transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all; }
+
+  /*------ Widget Styles ---------------
+  ---------------------------------- */
+  button {
+    background-color: inherit;
+    border: none;
+    outline: none; }
+
+  .plusMinus {
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 9px;
+    margin-right: 10px;
+    background: url(../images/widgets/plus.png) no-repeat;
+    background-size: 18px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s; }
+
+  .plusMinus:focus {
+    outline: none; }
+
+  .plusMinus.toggled {
+    background: url(../images/widgets/minus.png) no-repeat; }
+
+  button.DownloadPdf {
+    display: block;
+    margin: 0 auto;
+    padding: 40px;
+    position: relative; }
+
+  button.DownloadPdf a {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 0 20px;
+    line-height: 2em;
+    font-size: 18px;
+    box-shadow: #580000 0 10px 0 0;
+    -webkit-box-shadow: #580000 0 10px 0 0;
+    -ms-box-shadow: #580000 0 10px 0 0;
+    -moz-box-shadow: #580000 0 10px 0 0;
+    -o-box-shadow: #580000 0 10px 0 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px; }
+
+  button.DownloadPdf a:active {
+    box-shadow: #580000 0 5px 0 0;
+    -webkit-box-shadow: #580000 0 5px 0 0;
+    -ms-box-shadow: #580000 0 5px 0 0;
+    -moz-box-shadow: #580000 0 5px 0 0;
+    -o-box-shadow: #580000 0 5px 0 0;
+    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -o-transform: translateY(5px); }
+
+  /*------ Home View ---------------
+  ---------------------------------- */
+  .Home {
+    background-repeat: no-repeat;
+    background-position: 40% 0;
+    background-size: 33.333333%; }
+
+  .Writing {
+    background-repeat: no-repeat;
+    background-position: 45% 0;
+    background-size: 33.333333%; }
+
+  .Film {
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 33.333333%; }
+
+  .Resume {
+    background-repeat: no-repeat;
+    background-position: 57% 0;
+    background-size: 33.333333%; }
+
+  .Gallery {
+    background-repeat: no-repeat;
+    background-position: 45% 0;
+    background-size: 33.333333%; }
+
+  .SiteHeader {
+    text-transform: uppercase; }
+
+  .SiteHeader .Brand {
+    margin: 0 auto;
+    padding: 23.333333% 0 10px;
+    margin: 10% 0;
+    position: relative;
+    z-index: 1; }
+
+  .SiteHeader .Brand .Skillset {
+    font-size: 17px;
+    width: 240px;
+    margin: 0 auto; }
+
+  .SiteHeader .Brand .FullName {
+    font-size: 32px;
+    width: 275px;
+    margin: 0 auto; }
+
+  .SiteHeader .Brand .FullName .enhance {
+    font-family: aileronBold; }
+
+  .SiteNav {
+    width: 100%;
+    background: url(../images/navBack.png) repeat;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+    text-align: center; }
+    .SiteNav .Hamburger {
+      box-shadow: #580000 0 10px 0 0;
+      -webkit-box-shadow: #580000 0 10px 0 0;
+      -ms-box-shadow: #580000 0 10px 0 0;
+      -moz-box-shadow: #580000 0 10px 0 0;
+      -o-box-shadow: #580000 0 10px 0 0;
+      border-radius: 0 0 5px 5px;
+      -webkit-border-radius: 0 0 5px 5px;
+      -ms-border-radius: 0 0 5px 5px;
+      -moz-border-radius: 0 0 5px 5px;
+      -o-border-radius: 0 0 5px 5px;
+      border: none;
+      background: url(../images/navBack.png) repeat;
+      font-size: 25px;
+      display: inline-block; }
+    .SiteNav .Hamburger:focus {
+      outline: none; }
+    .SiteNav .Hamburger:active {
+      box-shadow: #580000 0 5px 0 0;
+      -webkit-box-shadow: #580000 0 5px 0 0;
+      -ms-box-shadow: #580000 0 5px 0 0;
+      -moz-box-shadow: #580000 0 5px 0 0;
+      -o-box-shadow: #580000 0 5px 0 0;
+      transform: translateY(5px);
+      -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+      -moz-transform: translateY(5px);
+      -o-transform: translateY(5px); }
+    .SiteNav .SiteNavList, .SiteNav .SiteNavList.toggled {
+      list-style: none;
+      text-align: left;
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px; }
+      .SiteNav .SiteNavList li, .SiteNav .SiteNavList.toggled li {
+        display: block; }
+        .SiteNav .SiteNavList li a, .SiteNav .SiteNavList.toggled li a {
+          color: white;
+          text-decoration: none;
+          font-size: 25px;
+          transition: all 0.4s;
+          -webkit-transition: all 0.4s;
+          -ms-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          -o-transition: all 0.4s; }
+        .SiteNav .SiteNavList li a:hover, .SiteNav .SiteNavList.toggled li a:hover {
+          text-decoration: underline; }
+    .SiteNav .SiteNavList.toggled {
+      position: relative;
+      height: auto;
+      overflow: initial;
+      padding: 20px 0;
+      margin: 0 auto;
+      width: 100px; }
+
+  .SiteFooter {
+    width: 100%; }
+    .SiteFooter .SocialMediaLinks {
+      padding: 60px 0 70px;
+      background-color: white;
+      position: relative;
+      z-index: 1; }
+      .SiteFooter .SocialMediaLinks ul {
+        list-style: none;
+        padding: 0;
+        width: 250px;
+        margin: 0 auto; }
+        .SiteFooter .SocialMediaLinks ul li {
+          display: inline-block;
+          padding: 15px; }
+          .SiteFooter .SocialMediaLinks ul li a {
+            display: block;
+            text-indent: -9999px;
+            width: 50px;
+            height: 48px;
+            background-size: 50px;
+            box-shadow: #6e0000 0 10px 0 0;
+            -webkit-box-shadow: #6e0000 0 10px 0 0;
+            -ms-box-shadow: #6e0000 0 10px 0 0;
+            -moz-box-shadow: #6e0000 0 10px 0 0;
+            -o-box-shadow: #6e0000 0 10px 0 0;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -o-border-radius: 5px; }
+          .SiteFooter .SocialMediaLinks ul li a:active {
+            box-shadow: #6e0000 0 5px 0 0;
+            -webkit-box-shadow: #6e0000 0 5px 0 0;
+            -ms-box-shadow: #6e0000 0 5px 0 0;
+            -moz-box-shadow: #6e0000 0 5px 0 0;
+            -o-box-shadow: #6e0000 0 5px 0 0;
+            transform: translateY(5px);
+            -webkit-transform: translateY(5px);
+            -ms-transform: translateY(5px);
+            -moz-transform: translateY(5px);
+            -o-transform: translateY(5px); }
+          .SiteFooter .SocialMediaLinks ul li .Facebook {
+            background: url(../images/socialMedia/facebook.jpg) no-repeat;
+            background-size: 50px; }
+          .SiteFooter .SocialMediaLinks ul li .Instagram {
+            background: black url(../images/socialMedia/instagram.jpg) no-repeat;
+            background-size: 50px; }
+          .SiteFooter .SocialMediaLinks ul li .Instagram:hover {
+            background-size: 50px; }
+          .SiteFooter .SocialMediaLinks ul li .Tumblr {
+            background: url(../images/socialMedia/tumbler.jpg) no-repeat;
+            background-size: 50px; }
+          .SiteFooter .SocialMediaLinks ul li .Youtube {
+            background: url(../images/socialMedia/youtube.jpg) no-repeat;
+            background-size: 50px; }
+          .SiteFooter .SocialMediaLinks ul li .Twitter {
+            background: url(../images/socialMedia/twitter.jpg) no-repeat;
+            background-size: 50px; }
+          .SiteFooter .SocialMediaLinks ul li .Linkedin {
+            background: url(../images/socialMedia/linkedin.jpg) no-repeat;
+            background-size: 50px; }
+          .SiteFooter .SocialMediaLinks ul li .Blogger {
+            background: url(../images/socialMedia/blogger.jpg) no-repeat;
+            background-size: 50px; }
+    .SiteFooter .Credits {
+      padding: 15px;
+      background: url(../images/navBack.png) repeat; }
+      .SiteFooter .Credits p {
+        color: white;
+        margin: 0;
+        text-align: center;
+        padding: 3px; }
+
+  .HomeView {
+    background-color: black;
+    color: white;
+    padding: 10% 10% 0 10%; }
+    .HomeView .DemoReel h1 {
+      padding-bottom: 10%;
+      margin: 0;
+      font-size: 25px; }
+    .HomeView .DemoReel .video {
+      margin: 0; }
+      .HomeView .DemoReel .video iframe {
+        width: 100%; }
+    .HomeView .ContactMe {
+      padding: 10% 0;
+      margin: 0 auto;
+      width: 250px; }
+      .HomeView .ContactMe ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 250px; }
+      .HomeView .ContactMe h1 {
+        padding: 0;
+        margin: 0; }
+      .HomeView .ContactMe .ContactForm {
+        text-align: center; }
+        .HomeView .ContactMe .ContactForm h2 {
+          margin: 0;
+          text-align: center;
+          padding: 10% 0;
+          font-size: 17px; }
+        .HomeView .ContactMe .ContactForm .field, .HomeView .ContactMe .ContactForm .SubmitContact {
+          border: 0;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+          transition: all 0.4s;
+          -webkit-transition: all 0.4s;
+          -ms-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          -o-transition: all 0.4s; }
+        .HomeView .ContactMe .ContactForm .field.toggled, .HomeView .ContactMe .ContactForm .toggled.SubmitContact {
+          position: relative;
+          margin: 0 auto;
+          height: auto;
+          overflow: initial;
+          width: 100%;
+          transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -o-transform: rotate(360deg); }
+        .HomeView .ContactMe .ContactForm .purpose {
+          padding: 20px; }
+        .HomeView .ContactMe .ContactForm .entry input {
+          color: black;
+          width: 100%; }
+        .HomeView .ContactMe .ContactForm .entry textarea {
+          resize: vertical;
+          width: 100%;
+          color: black; }
+        .HomeView .ContactMe .ContactForm .SubmitContact {
+          padding: 10px 30px;
+          border: none;
+          margin-top: 40px;
+          background-color: #8c0000;
+          box-shadow: #580000 0 10px 0 0;
+          -webkit-box-shadow: #580000 0 10px 0 0;
+          -ms-box-shadow: #580000 0 10px 0 0;
+          -moz-box-shadow: #580000 0 10px 0 0;
+          -o-box-shadow: #580000 0 10px 0 0;
+          border-radius: 9px;
+          -webkit-border-radius: 9px;
+          -ms-border-radius: 9px;
+          -moz-border-radius: 9px;
+          -o-border-radius: 9px;
+          transition: all 0.4s;
+          -webkit-transition: all 0.4s;
+          -ms-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          -o-transition: all 0.4s; }
+        .HomeView .ContactMe .ContactForm .SubmitContact.toggled {
+          position: relative;
+          height: auto;
+          overflow: initial;
+          width: 100%;
+          padding: 10px 30px;
+          margin-top: 40px;
+          transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -o-transform: rotate(360deg); }
+        .HomeView .ContactMe .ContactForm .SubmitContact:focus {
+          outline: none; }
+        .HomeView .ContactMe .ContactForm .SubmitContact:active {
+          box-shadow: #580000 0 3px 0 0;
+          -webkit-box-shadow: #580000 0 3px 0 0;
+          -ms-box-shadow: #580000 0 3px 0 0;
+          -moz-box-shadow: #580000 0 3px 0 0;
+          -o-box-shadow: #580000 0 3px 0 0;
+          transform: translateY(5px);
+          -webkit-transform: translateY(5px);
+          -ms-transform: translateY(5px);
+          -moz-transform: translateY(5px);
+          -o-transform: translateY(5px); }
+
+  /*------ Writing View ---------------
+  ---------------------------------- */
+  .WritingView {
+    background-color: black;
+    color: white;
+    padding: 5%; }
+    .WritingView article.StartingToday {
+      padding: 5% 0;
+      margin: 0 auto;
+      max-width: 540px;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -ms-box-shadow: none;
+      -moz-box-shadow: none;
+      -o-box-shadow: none; }
+      .WritingView article.StartingToday h1 {
+        margin: 0;
+        padding: 0;
+        background: none;
+        box-shadow: none;
+        text-align: left; }
+      .WritingView article.StartingToday p.snippet {
+        overflow: auto;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        line-height: 2em;
+        text-align: left;
+        letter-spacing: 1.2px;
+        text-indent: 0; }
+    .WritingView article {
+      margin: 10px 5px;
+      padding: 50px 20px 20px;
+      box-shadow: white 0 0 1px 0;
+      -webkit-box-shadow: white 0 0 1px 0;
+      -ms-box-shadow: white 0 0 1px 0;
+      -moz-box-shadow: white 0 0 1px 0;
+      -o-box-shadow: white 0 0 1px 0; }
+      .WritingView article h1 {
+        margin: 0;
+        padding: 20px;
+        font-size: 25px;
+        text-align: center;
+        cursor: pointer;
+        background: url(../images/SadNick.jpg) 50% 0 no-repeat;
+        background-attachment: fixed;
+        transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+        -ms-transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        -o-transition: all 0.1s;
+        box-shadow: inset 0 0 0 1000px rgba(40, 40, 40, 0.5);
+        -webkit-box-shadow: inset 0 0 0 1000px rgba(40, 40, 40, 0.5);
+        -ms-box-shadow: inset 0 0 0 1000px rgba(40, 40, 40, 0.5);
+        -moz-box-shadow: inset 0 0 0 1000px rgba(40, 40, 40, 0.5);
+        -o-box-shadow: inset 0 0 0 1000px rgba(40, 40, 40, 0.5); }
+      .WritingView article h1:active {
+        letter-spacing: 2px; }
+      .WritingView article .plusMinus {
+        margin: 20px 0 0; }
+      .WritingView article p.snippet:first-of-type {
+        margin-top: 30px; }
+      .WritingView article p.snippet {
+        text-indent: 2em;
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        transition: 0.4s;
+        -webkit-transition: 0.4s;
+        -ms-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s; }
+      .WritingView article p.snippet.toggled {
+        overflow: auto;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        line-height: 2em;
+        text-align: justify; }
+      .WritingView article aside {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px; }
+        .WritingView article aside button {
+          display: block; }
+        .WritingView article aside button a {
+          background-color: white;
+          color: black;
+          text-decoration: none;
+          display: block;
+          line-height: 2em;
+          font-size: 18px;
+          box-shadow: #580000 0 10px 0 0;
+          -webkit-box-shadow: #580000 0 10px 0 0;
+          -ms-box-shadow: #580000 0 10px 0 0;
+          -moz-box-shadow: #580000 0 10px 0 0;
+          -o-box-shadow: #580000 0 10px 0 0;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -o-border-radius: 5px;
+          border: 0;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px; }
+        .WritingView article aside button.toggled a, .WritingView article aside button.viewStartingToday a {
+          overflow: auto;
+          position: relative;
+          width: 114px;
+          height: 37px;
+          margin: 30px 0; }
+        .WritingView article aside button a:active {
+          box-shadow: #580000 0 5px 0 0;
+          -webkit-box-shadow: #580000 0 5px 0 0;
+          -ms-box-shadow: #580000 0 5px 0 0;
+          -moz-box-shadow: #580000 0 5px 0 0;
+          -o-box-shadow: #580000 0 5px 0 0;
+          transform: translateY(5px);
+          -webkit-transform: translateY(5px);
+          -ms-transform: translateY(5px);
+          -moz-transform: translateY(5px);
+          -o-transform: translateY(5px); }
+      .WritingView article aside.toggled, .WritingView article aside.viewStartingToday {
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 0;
+        padding-top: 30px; }
+
+  /*------ Film View ---------------
+  ---------------------------------- */
+  @keyframes flash {
+    30% {
+      border-right: 1px solid #fa0000;
+      border-left: 1px solid #fa0000; }
+    70% {
+      border-right: 1px solid #fa0000;
+      border-left: 1px solid #fa0000; } }
+  @-webkit-keyframes flash {
+    30% {
+      border-right: 1px solid #fa0000;
+      border-left: 1px solid #fa0000; }
+    70% {
+      border-right: 1px solid #fa0000;
+      border-left: 1px solid #fa0000; } }
+  @-moz-keyframes flash {
+    30% {
+      border-right: 1px solid #fa0000;
+      border-left: 1px solid #fa0000; }
+    70% {
+      border-right: 1px solid #fa0000;
+      border-left: 1px solid #fa0000; } }
+  @-o-keyframes flash {
+    30% {
+      border-right: 1px solid #fa0000;
+      border-left: 1px solid #fa0000; }
+    70% {
+      border-right: 1px solid #fa0000;
+      border-left: 1px solid #fa0000; } }
+  .FilmView {
+    background-color: black;
+    color: white;
+    padding: 60px 5%; }
+    .FilmView .Highlights {
+      padding: 25px;
+      border-right: 1px solid black;
+      border-left: 1px solid black;
+      animation: flash 6s infinite;
+      -webkit-animation: flash 6s infinite;
+      -ms-animation: flash 6s infinite;
+      -moz-animation: flash 6s infinite;
+      -o-animation: flash 6s infinite;
+      border-radius: 500px 0px 400px 0px;
+      -webkit-border-radius: 500px 0px 400px 0px;
+      -ms-border-radius: 500px 0px 400px 0px;
+      -moz-border-radius: 500px 0px 400px 0px;
+      -o-border-radius: 500px 0px 400px 0px; }
+      .FilmView .Highlights h1 {
+        margin: 0;
+        text-align: center; }
+    .FilmView .VideoGenres {
+      padding: 25px;
+      margin-top: 25px;
+      border-right: 1px solid black;
+      border-left: 1px solid black;
+      animation: flash 6s infinite;
+      -webkit-animation: flash 6s infinite;
+      -ms-animation: flash 6s infinite;
+      -moz-animation: flash 6s infinite;
+      -o-animation: flash 6s infinite;
+      border-radius: 500px 0px 400px 0px;
+      -webkit-border-radius: 500px 0px 400px 0px;
+      -ms-border-radius: 500px 0px 400px 0px;
+      -moz-border-radius: 500px 0px 400px 0px;
+      -o-border-radius: 500px 0px 400px 0px; }
+      .FilmView .VideoGenres nav ul {
+        list-style: none;
+        text-align: center;
+        padding: 0; }
+        .FilmView .VideoGenres nav ul li {
+          display: inline-block;
+          padding: 20px;
+          transition: 0.3s;
+          -webkit-transition: 0.3s;
+          -ms-transition: 0.3s;
+          -moz-transition: 0.3s;
+          -o-transition: 0.3s; }
+        .FilmView .VideoGenres nav ul li:hover {
+          background: #8c0000 url(../images/navBack.png);
+          cursor: pointer; }
+        .FilmView .VideoGenres nav ul .current {
+          background: #8c0000 url(../images/navBack.png); }
+    .FilmView .carousel {
+      overflow: hidden; }
+      .FilmView .carousel ul {
+        list-style: none;
+        padding: 0;
+        overflow: auto;
+        position: relative;
+        left: 0%; }
+        .FilmView .carousel ul li {
+          float: left; }
+          .FilmView .carousel ul li figure.video {
+            margin: 0; }
+            .FilmView .carousel ul li figure.video iframe {
+              width: 100%;
+              max-width: 640px;
+              height: 300px; }
+      .FilmView .carousel .HighlightsList {
+        width: 200%; }
+        .FilmView .carousel .HighlightsList li {
+          width: 50%; }
+      .FilmView .carousel .Comedy {
+        width: 500%; }
+        .FilmView .carousel .Comedy li {
+          width: 20%; }
+      .FilmView .carousel .Drama {
+        width: 500%; }
+        .FilmView .carousel .Drama li {
+          width: 20%; }
+      .FilmView .carousel .Miscellaneous {
+        width: 400%; }
+        .FilmView .carousel .Miscellaneous li {
+          width: 25%; }
+      .FilmView .carousel .prevButton {
+        float: left;
+        margin: 0;
+        background-color: #8c0000;
+        font-size: 50px;
+        padding: 0 20px 0 10px;
+        box-shadow: #500000 8px 5px 0px 0px;
+        -webkit-box-shadow: #500000 8px 5px 0px 0px;
+        -ms-box-shadow: #500000 8px 5px 0px 0px;
+        -moz-box-shadow: #500000 8px 5px 0px 0px;
+        -o-box-shadow: #500000 8px 5px 0px 0px;
+        transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+        -ms-transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        -o-transition: all 0.1s;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px; }
+      .FilmView .carousel .prevButton:active {
+        box-shadow: #500000 0 0 0 0;
+        -webkit-box-shadow: #500000 0 0 0 0;
+        -ms-box-shadow: #500000 0 0 0 0;
+        -moz-box-shadow: #500000 0 0 0 0;
+        -o-box-shadow: #500000 0 0 0 0; }
+      .FilmView .carousel .nextButton {
+        float: right;
+        background-color: #8c0000;
+        font-size: 50px;
+        padding: 0 15px 0 20px;
+        margin-bottom: 5px;
+        box-shadow: #500000 -8px 5px 0px 0px;
+        -webkit-box-shadow: #500000 -8px 5px 0px 0px;
+        -ms-box-shadow: #500000 -8px 5px 0px 0px;
+        -moz-box-shadow: #500000 -8px 5px 0px 0px;
+        -o-box-shadow: #500000 -8px 5px 0px 0px;
+        transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+        -ms-transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        -o-transition: all 0.1s;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px; }
+      .FilmView .carousel .nextButton:active {
+        box-shadow: #500000 0 0 0 0;
+        -webkit-box-shadow: #500000 0 0 0 0;
+        -ms-box-shadow: #500000 0 0 0 0;
+        -moz-box-shadow: #500000 0 0 0 0;
+        -o-box-shadow: #500000 0 0 0 0; }
+
+  /*  --------- Resume View --------------
+  ----------- - - - - - - - - - --    ---*/
+  .ResumeView {
+    background-color: white; }
+    .ResumeView figure.Resume {
+      margin: 0 auto;
+      margin-bottom: -4px; }
+      .ResumeView figure.Resume img {
+        width: 100%;
+        max-width: 1000px; }
+
+  .GalleryView {
+    background-color: black;
+    padding: 60px; }
+    .GalleryView .carousel {
+      overflow: hidden;
+      margin: 0 auto;
+      max-width: 900px; }
+      .GalleryView .carousel h1 {
+        color: white;
+        text-align: center; }
+      .GalleryView .carousel ul.Headshots {
+        list-style: none;
+        padding: 0;
+        overflow: auto;
+        position: relative;
+        left: 0%;
+        width: 400%; }
+        .GalleryView .carousel ul.Headshots li {
+          float: left;
+          width: 25%; }
+          .GalleryView .carousel ul.Headshots li figure {
+            margin: 0; }
+            .GalleryView .carousel ul.Headshots li figure img {
+              width: 100%;
+              max-width: 900px; }
+      .GalleryView .carousel ul.Pictures {
+        list-style: none;
+        padding: 0;
+        overflow: auto;
+        position: relative;
+        left: 0%;
+        width: 500%; }
+        .GalleryView .carousel ul.Pictures li {
+          float: left;
+          width: 20%; }
+          .GalleryView .carousel ul.Pictures li figure {
+            margin: 0; }
+            .GalleryView .carousel ul.Pictures li figure img {
+              width: 100%;
+              max-width: 900px; }
+      .GalleryView .carousel .prevButton {
+        float: left;
+        margin: 0;
+        background-color: #8c0000;
+        font-size: 50px;
+        color: white;
+        padding: 0 20px 0 10px;
+        box-shadow: #500000 8px 5px 0px 0px;
+        -webkit-box-shadow: #500000 8px 5px 0px 0px;
+        -ms-box-shadow: #500000 8px 5px 0px 0px;
+        -moz-box-shadow: #500000 8px 5px 0px 0px;
+        -o-box-shadow: #500000 8px 5px 0px 0px;
+        transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+        -ms-transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        -o-transition: all 0.1s;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px; }
+      .GalleryView .carousel .prevButton:active {
+        box-shadow: #500000 0 0 0 0;
+        -webkit-box-shadow: #500000 0 0 0 0;
+        -ms-box-shadow: #500000 0 0 0 0;
+        -moz-box-shadow: #500000 0 0 0 0;
+        -o-box-shadow: #500000 0 0 0 0; }
+      .GalleryView .carousel .nextButton {
+        float: right;
+        color: white;
+        background-color: #8c0000;
+        font-size: 50px;
+        padding: 0 15px 0 20px;
+        margin-bottom: 5px;
+        box-shadow: #500000 -8px 5px 0px 0px;
+        -webkit-box-shadow: #500000 -8px 5px 0px 0px;
+        -ms-box-shadow: #500000 -8px 5px 0px 0px;
+        -moz-box-shadow: #500000 -8px 5px 0px 0px;
+        -o-box-shadow: #500000 -8px 5px 0px 0px;
+        transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+        -ms-transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        -o-transition: all 0.1s;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px; }
+      .GalleryView .carousel .nextButton:active {
+        box-shadow: #500000 0 0 0 0;
+        -webkit-box-shadow: #500000 0 0 0 0;
+        -ms-box-shadow: #500000 0 0 0 0;
+        -moz-box-shadow: #500000 0 0 0 0;
+        -o-box-shadow: #500000 0 0 0 0; } }
+@media all and (min-width: 730px) {
+  .Home {
+    background-repeat: no-repeat;
+    background-position: 100% 20%;
+    background-attachment: fixed;
+    background-size: 73.333333%; }
+
+  .Writing {
+    background-repeat: no-repeat;
+    background-position: 100% 24%;
+    background-attachment: fixed;
+    background-size: 73.333333%; }
+
+  .Film {
+    background-repeat: no-repeat;
+    background-position: 100% 24%;
+    background-attachment: fixed;
+    background-size: 73.333333%; }
+
+  .Resume {
+    background-repeat: no-repeat;
+    background-position: 100% 24%;
+    background-attachment: fixed;
+    background-size: 73.333333%; }
+
+  .Gallery {
+    background-repeat: no-repeat;
+    background-position: 100% 24%;
+    background-attachment: fixed;
+    background-size: 73.333333%; }
+
+  .SiteHeader {
+    padding: 20% 0 10%; }
+    .SiteHeader .Brand {
+      padding: 110px 0px;
+      font-size: 40px;
+      width: 600px;
+      margin: 0 auto; }
+      .SiteHeader .Brand .FullName {
+        font-size: 40px;
+        width: 600px;
+        margin-top: -60px;
+        position: fixed;
+        z-index: -1; }
+      .SiteHeader .Brand .Skillset {
+        font-size: 20px;
+        width: 540px;
+        position: fixed;
+        margin: -10px 0 0 25px;
+        z-index: -1; }
+
+  .SiteNav .Hamburger {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+  .SiteNav .SiteNavList, .SiteNav .SiteNavList.toggled {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    overflow: initial;
+    width: 460px; }
+    .SiteNav .SiteNavList li, .SiteNav .SiteNavList.toggled li {
+      display: inline-block;
+      padding-right: 20px; }
+      .SiteNav .SiteNavList li a, .SiteNav .SiteNavList.toggled li a {
+        font-size: 20px !important; }
+
+  .HomeView .DemoReel {
+    width: 600px;
+    margin: 0 auto; }
+    .HomeView .DemoReel h1 {
+      width: 450px;
+      font-size: 25px; }
+    .HomeView .DemoReel .video {
+      margin: 0 auto; }
+  .HomeView .ContactMe {
+    padding: 10% 0;
+    margin: 0 auto;
+    width: 600px; }
+    .HomeView .ContactMe h1 {
+      font-size: 35px; }
+    .HomeView .ContactMe ul {
+      width: 100%; }
+      .HomeView .ContactMe ul li {
+        font-size: 25px; }
+    .HomeView .ContactMe .ContactForm h2 {
+      padding: 10% 0 5%;
+      font-size: 25px; }
+    .HomeView .ContactMe .ContactForm .entry input {
+      width: 300px;
+      height: 40px;
+      margin: 0 auto;
+      text-indent: 2em; }
+    .HomeView .ContactMe .ContactForm textarea {
+      width: 500px;
+      margin: 0 auto; }
+    .HomeView .ContactMe .ContactForm .SubmitContact, .HomeView .ContactMe .ContactForm .SubmitContact.toggled {
+      width: 190px; }
+
+  .SiteFooter .SocialMediaLinks ul {
+    width: 580px; }
+
+  /*------ Film View ---------------
+  ---------------------------------- */
+  .FilmView .carousel {
+    width: 640px;
+    margin: 0 auto; }
+
+  .FilmView .carousel ul li figure.video iframe {
+    height: 360px; } }
+@media all and (min-width: 1000px) {
+  .Home {
+    background-repeat: no-repeat;
+    background-position: 100% 20px;
+    background-attachment: fixed;
+    background-size: 935px; }
+
+  .Writing {
+    background-repeat: no-repeat;
+    background-position: 100% 60px;
+    background-attachment: fixed;
+    background-size: 935px; }
+
+  .Film {
+    background-repeat: no-repeat;
+    background-position: 100% 60px;
+    background-attachment: fixed;
+    background-size: 935px; }
+
+  .Resume {
+    background-repeat: no-repeat;
+    background-position: 100% 60px;
+    background-attachment: fixed;
+    background-size: 935px; }
+
+  .Gallery {
+    background-repeat: no-repeat;
+    background-position: 100% 60px;
+    background-attachment: fixed;
+    background-size: 935px; }
+
+  .SiteHeader {
+    height: 660px;
+    margin-top: 8px;
+    padding: 10px 0; }
+    .SiteHeader .Brand {
+      padding: 260px 0;
+      width: 935px;
+      margin: 0 auto; }
+      .SiteHeader .Brand .FullName {
+        margin: 0; }
+
+  .SiteHeader .Brand .Skillset {
+    font-size: 30px;
+    width: 870px;
+    margin: 70px 0 0 45px;
+    position: fixed;
+    z-index: -1; }
+
+  .SiteHeader .Brand .FullName {
+    font-size: 60px;
+    width: 950px;
+    position: fixed;
+    z-index: -1; }
+
+  .SiteNav {
+    padding: 20px 0;
+    margin-top: -10px; }
+
+  .HomeView {
+    padding: 60px 60px 0 60px; }
+
+  .HomeView .ContactMe {
+    width: 810px;
+    padding: 60px 0; }
+
+  .HomeView .DemoReel {
+    width: 850px; }
+    .HomeView .DemoReel h1 {
+      font-size: 35px;
+      width: 570px; }
+
+  .HomeView .ContactMe .ContactForm h2 {
+    padding: 50px 0 0 0; }
+
+  .SiteFooter .SocialMediaLinks {
+    padding: 60px 0 70px; }
+    .SiteFooter .SocialMediaLinks ul {
+      width: 580px; }
+
+  .WritingView {
+    padding: 60px; }
+    .WritingView article.StartingToday {
+      padding: 0 0 40px; }
+    .WritingView article {
+      width: 850px;
+      margin: 10px auto; }
+      .WritingView article h1 {
+        font-size: 40px; }
+      .WritingView article p.snippet.toggled {
+        font-size: 25px; }
+
+  /*------ Film View ---------------
+  ---------------------------------- */
+  .FilmView .Highlights {
+    margin: 0 auto;
+    width: 900px;
+    padding: 25px 0; }
+  .FilmView .VideoGenres {
+    margin: 25px auto 0;
+    width: 900px;
+    padding: 25px 0; }
+
+  /*  --------- Resume View --------------
+  ----------- - - - - - - - - - --    ---*/
+  .ResumeView figure.Resume {
+    width: 1000px; } }

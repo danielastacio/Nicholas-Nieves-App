@@ -10,7 +10,7 @@
                 restrict: 'A',
                 link: function (scope, element) {
     
-                    var prevButton, nextButton;
+                    // var prevButton, nextButton;
                     var idx = 0; // default
                     var maxIdx;
                     var ulLists = [];
@@ -31,40 +31,10 @@
                                 ulLists.push(angular.element(element.children().eq(i)[0]));
                             } //end of if
     
-                            if (element.children().eq(i).hasClass('prevButton')) {
-                                prevButton = element.children().eq(i);
-                            }
-    
-                            if (element.children().eq(i).hasClass('nextButton')) {
-                                nextButton = element.children().eq(i);
-                            }
-    
                         } //end of for
-    
-                        /* ----------------------------------------------------------------------- */
-                        // Reset Carousel every time the data for "film.ctrl.genre" is changed 
-    
-    
-                        $document.on('click', function (e) {
-                            if (angular.element(e.target).hasClass('current') && ulLists.length > 1) {
-    
-                                idx = 0;
-                                position = 0;
-    
-                                for (var i = 0; i < ulLists.length; i++) {
-    
-                                    ulLists[i].css({
-                                        'left': position + '%'
-                                    });
-                                }
-                            }
-                        });
-    
-                        /* ----------------------------------------------------------------------- */
-    
-                        nextButton.on('click', function () {
-    
-                            function traverseForward() {
+
+
+                         function traverseForward() {
     
                                 if (idx === maxIdx) {
     
@@ -90,51 +60,8 @@
     
                                 } // end of inner else
                             } // end of traverseForward 
-    
-                            if (ulLists.length === 1) {
-    
-                                maxIdx = ulLists[0].children().length - 1;
-    
-                                targetUlList.push(ulLists[0]);
-                                traverseForward();
-                            } // end of if
-                            else {
-    
-                                /* ---------------------------------------------------------------------------- */
-    
-                                /*  Make sure to reset "targetUlList" array to prevent the user from creating duplicates
-                                    of the same unordered list.
-                                */
-                                targetUlList.splice(0, 1);
-    
-                                /* ---------------------------------------------------------------------------- */
-    
-    
-    
-                                for (var i = 0; i < ulLists.length; i++) {
-    
-                                    maxIdx = ulLists[i].children().length - 1;
-    
-                                    if (scope.film.genre === 'Comedy' && ulLists[i].hasClass('Comedy')) {
-    
-                                        targetUlList.push(ulLists[i]);
-                                        traverseForward();
-                                    } else if (scope.film.genre === 'Drama' && ulLists[i].hasClass('Drama')) {
-    
-                                        targetUlList.push(ulLists[i]);
-                                        traverseForward();
-                                    } else if (scope.film.genre === 'Miscellaneous' && ulLists[i].hasClass('Miscellaneous')) {
-    
-    
-                                        targetUlList.push(ulLists[i]);
-                                        traverseForward();
-                                    }
-                                }
-                            }
-                        });
-    
-                        prevButton.on('click', function () {
-                            function traverseBackwards() {
+
+                        function traverseBackwards() {
                                 if (idx === 0) {
     
                                     idx = maxIdx;
@@ -158,16 +85,45 @@
                                 } // end of else
                             } // end of traverseBackwards
     
+                        /* ----------------------------------------------------------------------- */
+                        // Reset Carousel every time the data for "film.ctrl.genre" is changed 
+    
+    
+                        $document.on('click', function (e) {
+
+                            target = angular.element(e.target);
+
+                            if (target.hasClass('current') && ulLists.length > 1) {
+    
+                                idx = 0;
+                                position = 0;
+    
+                                for (var i = 0; i < ulLists.length; i++) {
+    
+                                    ulLists[i].css({
+                                        'left': position + '%'
+                                    });
+                                }
+                            }
+
                             if (ulLists.length === 1) {
 
                                 maxIdx = ulLists[0].children().length - 1;
-
+    
                                 targetUlList.push(ulLists[0]);
-                                traverseBackwards();
-                            } // end of if
-                            else {
 
-                                /* --------------------------------------------------------------------------- */
+                                if (target.hasClass('nextButton')) {                                    
+                                    traverseForward();
+                                }
+
+                                if (target.hasClass('prevButton')) {                                    
+                                    traverseBackwards();
+                                }
+                            } // end of if
+
+                            else {
+    
+                                /* ---------------------------------------------------------------------------- */
     
                                 /*  Make sure to reset "targetUlList" array to prevent the user from creating duplicates
                                     of the same unordered list.
@@ -176,6 +132,8 @@
     
                                 /* ---------------------------------------------------------------------------- */
     
+    
+    
                                 for (var i = 0; i < ulLists.length; i++) {
     
                                     maxIdx = ulLists[i].children().length - 1;
@@ -183,24 +141,73 @@
                                     if (scope.film.genre === 'Comedy' && ulLists[i].hasClass('Comedy')) {
     
                                         targetUlList.push(ulLists[i]);
-                                        traverseBackwards();
-    
+                                        traverseForward();
                                     } else if (scope.film.genre === 'Drama' && ulLists[i].hasClass('Drama')) {
     
                                         targetUlList.push(ulLists[i]);
-                                        traverseBackwards();
-    
+                                        traverseForward();
                                     } else if (scope.film.genre === 'Miscellaneous' && ulLists[i].hasClass('Miscellaneous')) {
     
     
                                         targetUlList.push(ulLists[i]);
-                                        traverseBackwards();
-    
+                                        traverseForward();
                                     }
                                 }
                             }
+
+
+                        });
     
-                        }); // end of click function
+                        /* ----------------------------------------------------------------------- */
+    
+
+    
+                            
+                        // prevButton.on('click', function () {
+    
+                        //     if (ulLists.length === 1) {
+
+                        //         maxIdx = ulLists[0].children().length - 1;
+
+                        //         targetUlList.push(ulLists[0]);
+                        //         traverseBackwards();
+                        //     } // end of if
+                        //     else {
+
+                        //         /* --------------------------------------------------------------------------- */
+    
+                        //           Make sure to reset "targetUlList" array to prevent the user from creating duplicates
+                        //             of the same unordered list.
+                                
+                        //         targetUlList.splice(0, 1);
+    
+                        //         /* ---------------------------------------------------------------------------- */
+    
+                        //         for (var i = 0; i < ulLists.length; i++) {
+    
+                        //             maxIdx = ulLists[i].children().length - 1;
+    
+                        //             if (scope.film.genre === 'Comedy' && ulLists[i].hasClass('Comedy')) {
+    
+                        //                 targetUlList.push(ulLists[i]);
+                        //                 traverseBackwards();
+    
+                        //             } else if (scope.film.genre === 'Drama' && ulLists[i].hasClass('Drama')) {
+    
+                        //                 targetUlList.push(ulLists[i]);
+                        //                 traverseBackwards();
+    
+                        //             } else if (scope.film.genre === 'Miscellaneous' && ulLists[i].hasClass('Miscellaneous')) {
+    
+    
+                        //                 targetUlList.push(ulLists[i]);
+                        //                 traverseBackwards();
+    
+                        //             }
+                        //         }
+                        //     }
+    
+                        // }); // end of click function
                     }); // end of ready function
                 } // end of link function
         } // end of return

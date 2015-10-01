@@ -177,6 +177,6 @@
                     }); // end of element click
                 }); // end of ready function
             } // end of link function
-        } // end of return
+        }; // end of return
     }
 })();

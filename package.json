@@ -1,6 +1,7 @@
 {
   "name": "nickApp",
   "version": "1.0.0",
+  "author": "Daniel Astacio",
   "repository": {
     "type": "git",
     "url": "http://github.com/danielastacio/Nicholas-Nieves-App.git"

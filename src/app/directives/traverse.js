@@ -110,10 +110,11 @@
                     /* ----------------------------------------------------------------------- */
 
                     element.on('click', function (e) {
-                        var target = angular.element(e.toElement);
-
+                        
+                        var target = angular.element(e.target);
+                        
                         if (ulLists.length === 1) {
-
+                            
                             maxIdx = ulLists[0].children().length - 1;
 
                             targetUlList.push(ulLists[0]);
@@ -140,7 +141,6 @@
                             /* ---------------------------------------------------------------------------- */
 
 
-
                             for (var i = 0; i < ulLists.length; i++) {
 
                                 maxIdx = ulLists[i].children().length - 1;
@@ -159,9 +159,16 @@
                                 } else if (scope.film.genre === 'Drama' && ulLists[i].hasClass('Drama')) {
 
                                     targetUlList.push(ulLists[i]);
-                                    traverseForward();
-                                } else if (scope.film.genre === 'Miscellaneous' && ulLists[i].hasClass('Miscellaneous')) {
+                                    
+                                    if (target.hasClass('nextButton')) {
+                                        traverseForward();
+                                    } // end of inner if
 
+                                    if (target.hasClass('prevButton')) {
+                                        traverseBackwards();
+                                    } // end of inner if
+                                    
+                                } else if (scope.film.genre === 'Miscellaneous' && ulLists[i].hasClass('Miscellaneous')) {
 
                                     targetUlList.push(ulLists[i]);
                                     if (target.hasClass('nextButton')) {

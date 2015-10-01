@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "http://github.com/danielastacio/nicholas-nieves-app.git"
+    "url": "http://github.com/danielastacio/Nicholas-Nieves-App.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

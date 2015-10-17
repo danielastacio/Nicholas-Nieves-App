@@ -3,9 +3,9 @@
 		.module('nick.app.home')
 		.controller('Home', controller);
 		
-	controller.$inject = ['$http'];
+	controller.$inject = ['$http','$window','viewportService'];
 
-	function controller($http) {
+	function controller($http, $window, viewportService) {
 		var vm = this;
 		vm.input = {};
 		vm.submitContact = submitContact;
@@ -18,17 +18,12 @@
 					url: 'contactForm.php',
 					data: $.param(vm.input),  // pass in data as strings
 					headers: { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
-				})
-					.success(function (data) {
-						console.log(data);
-						if (!data.success) {
-							// if not successful, bind errors to error variables
-							vm.message = 'success';
-						} else {
-							// if successful, bind success message to message
-							vm.message = 'error';
-						}
-					});
+				});
+
+				console.log(vm.input);
+				vm.input = null;
+				// viewportService.scrollToTop();
+				// $window.location.reload();
 			}
 		}
 	}

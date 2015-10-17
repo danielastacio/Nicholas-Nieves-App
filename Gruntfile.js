@@ -60,7 +60,7 @@ module.exports = function (grunt) {
     cssmin: {
       target: {
         files: {
-          'dest/css/main.min.css': ['src/content/css/*.css']
+          'dest/css/global.min.css': ['src/content/css/*.css']
         }
       }
     }

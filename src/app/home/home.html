@@ -15,8 +15,8 @@
       <li>Email: nicholas.nieves@ymail.com</li>
     </ul>
   <form class="ContactForm" name="home.contactForm" ng-submit="home.submitContact()" novalidate>
-    <h2>
-      <button type="button" class="plusMinus widget" toggle-Elm="plusMinus,field,SubmitContact"></button>
+    <h2 toggle-Elm="plusMinus,field,SubmitContact">
+      <button type="button" class="plusMinus widget"></button>
       Or you can send me a message
     </h2>
     <div class="NameField field required" ng-class="{invalid: !home.contactForm.name.$valid}">

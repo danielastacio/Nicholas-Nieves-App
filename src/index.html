@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en" ng-app="nick.app" ng-controller="Site as site">
 
 <head>
@@ -18,6 +18,7 @@
             <div class="Skillset">
                 Actor. Writer. Storyteller.
             </div>
+            <button class="ScrollDown" scroll-to="TheView">&#11015;</button>
         </div>
     </header>
     <nav class="SiteNav">
@@ -25,17 +26,15 @@
             &#9776; Menu
         </button>
         <ul class="SiteNavList">
-            <li><a href="#/">Home</a></li>
+            <li ng-class="{active: site.view == 'Home'}"><a href="#/">Home</a></li>
             <li><a href="http://www.youtube.com/bbbkproductions" target="_blank">BBBk</a></li>
-            <li><a href="#/resume">Resume</a></li>
-            <li><a href="#/writing">Writing</a></li>
-            <li><a href="#/gallery">Gallery</a></li>
-            <li><a href="#/film">Film</a></li>
+            <li ng-class="{active: site.view == 'Resume'}"><a href="#/resume">Resume</a></li>
+            <li ng-class="{active: site.view == 'Writing'}"><a href="#/writing">Writing</a></li>
+            <li ng-class="{active: site.view == 'Gallery'}"><a href="#/gallery">Gallery</a></li>
+            <li ng-class="{active: site.view == 'Film'}"><a href="#/film">Film</a></li>
         </ul>
     </nav>
-
-    <div ng-view=""></div>
-
+        <div class="TheView" ng-view></div>
     <footer class="SiteFooter">
         <nav class="SocialMediaLinks">
             <ul>
@@ -55,8 +54,8 @@
             </ul>
         </nav>
         <div class="Credits">
-            <p>Nicholas Nieves</p>
-            <p>Designed by Dastacio Designs</p>
+            <p>&copy; Nicholas Nieves</p>
+            <p>Designed by <a href="http://www.dastaciodesigns.com/" target="_blank">Dastacio Designs</a></p>
         </div>
     </footer>
     
@@ -83,6 +82,7 @@
     <script src="app/directives/toggle-element.js"></script>
     <script src="app/directives/traverse.js"></script>
     <script src="app/directives/background-image.js"></script>
+    <script src="app/directives/scroll-To.js"></script>
     
      <!--****************  services  **************** -->
      <script src="app/services/_module.js"></script>

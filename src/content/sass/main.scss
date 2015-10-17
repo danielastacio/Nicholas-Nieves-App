@@ -591,7 +591,7 @@ body {
       @include vendor-prefix(transform, translateY(5px));
     }
 
-    .SiteNavList, .SiteNavList.toggled{ 
+    .SiteNavList, .SiteNavList.toggled { 
       list-style: none;
       text-align: left;
       @include VisuallyHidden;
@@ -606,11 +606,17 @@ body {
             @include vendor-prefix(transition, all .4s);
 
           }
+
           a:hover {
             text-decoration: underline;
           }
-        }
       }
+
+      .active {
+        text-decoration: underline;
+      }
+
+    }
 
       .SiteNavList.toggled {
         position: relative;
@@ -707,6 +713,10 @@ body {
         margin: 0;
         text-align: center;
         padding: 3px;
+
+        a {
+          color: white;
+        }
       }
     }
   }
@@ -757,6 +767,10 @@ body {
           text-align: center;
           padding: 10% 0;
           font-size: 17px;
+        }
+
+        h2:hover {
+          cursor: pointer;
         }
 
         .field {
@@ -1427,6 +1441,15 @@ body {
 
 @media all and (min-width: 1000px) {
 
+  @keyframes bounce {
+
+    50% {
+      transform: translateY(20px);
+    }
+  }
+
+
+
   .Home {
         background-repeat: no-repeat;
         background-position: 100% 20px;
@@ -1474,6 +1497,18 @@ body {
 
         .FullName {
           margin: 0;
+        }
+
+        .ScrollDown {
+          margin: 180px 0 0 230px;
+          position: fixed;
+          @include vendor-prefix('animation', 'bounce 1s infinite');
+        }
+
+        .ScrollDown:hover {
+          background-color: black;
+          color: white;
+          @include vendor-prefix('border-radius', '50px');
         }
       }
   }

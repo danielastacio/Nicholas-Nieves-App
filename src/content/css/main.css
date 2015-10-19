@@ -11,6 +11,11 @@ html {
   /* 2 */
     -webkit-text-size-adjust: 100%;
   /* 2 */
+    overflow-x: hidden;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 /**
@@ -18,6 +23,7 @@ html {
  */
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 /* HTML5 display definitions
@@ -514,9 +520,7 @@ body {
   .SiteHeader .Brand {
     margin: 0 auto;
     padding: 23.333333% 0 10px;
-    margin: 10% 0;
-    position: relative;
-    z-index: 1; }
+    margin: 10% 0; }
 
   .SiteHeader .Brand .Skillset {
     font-size: 17px;
@@ -527,6 +531,9 @@ body {
     font-size: 32px;
     width: 275px;
     margin: 0 auto; }
+
+  .SiteHeader .Brand .ScrollDown {
+    display: none; }
 
   .SiteHeader .Brand .FullName .enhance {
     font-family: aileronBold; }
@@ -591,7 +598,8 @@ body {
         .SiteNav .SiteNavList li a:hover, .SiteNav .SiteNavList.toggled li a:hover {
           text-decoration: underline; }
       .SiteNav .SiteNavList .active, .SiteNav .SiteNavList.toggled .active {
-        text-decoration: underline; }
+        text-decoration: underline;
+        color: white; }
     .SiteNav .SiteNavList.toggled {
       position: relative;
       height: auto;
@@ -601,12 +609,12 @@ body {
       width: 100px; }
 
   .SiteFooter {
-    width: 100%; }
+    width: 100%;
+    position: relative;
+    z-index: 0; }
     .SiteFooter .SocialMediaLinks {
       padding: 60px 0 70px;
-      background-color: white;
-      position: relative;
-      z-index: 1; }
+      background-color: white; }
       .SiteFooter .SocialMediaLinks ul {
         list-style: none;
         padding: 0;
@@ -828,6 +836,42 @@ body {
       -ms-box-shadow: white 0 0 1px 0;
       -moz-box-shadow: white 0 0 1px 0;
       -o-box-shadow: white 0 0 1px 0; }
+      .WritingView article .overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        overflow-y: scroll;
+        z-index: 2;
+        background-color: black;
+        display: none; }
+        .WritingView article .overlay .content {
+          padding: 5%;
+          margin: 20px auto;
+          max-width: 800px; }
+          .WritingView article .overlay .content p {
+            overflow: auto;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            line-height: 2em;
+            text-align: left;
+            letter-spacing: 1.2px;
+            text-indent: 1.5em; }
+        .WritingView article .overlay .closeLightbox {
+          padding: 10px;
+          border: none;
+          position: fixed;
+          z-index: 1;
+          background: url(../images/navBack.png) repeat;
+          margin: 0 auto;
+          width: 100%;
+          color: white;
+          transition: all 0.2s; }
+        .WritingView article .overlay .closeLightbox:focus {
+          outline: none; }
       .WritingView article h1 {
         margin: 0;
         padding: 20px;
@@ -886,7 +930,7 @@ body {
         width: 1px; }
         .WritingView article aside button {
           display: block; }
-        .WritingView article aside button a {
+        .WritingView article aside button {
           background-color: white;
           color: black;
           text-decoration: none;
@@ -911,13 +955,13 @@ body {
           padding: 0;
           position: absolute;
           width: 1px; }
-        .WritingView article aside button.toggled a, .WritingView article aside button.viewStartingToday a {
+        .WritingView article aside button.toggled, .WritingView article aside button.viewStartingToday {
           overflow: auto;
           position: relative;
           width: 114px;
           height: 37px;
           margin: 30px 0; }
-        .WritingView article aside button a:active {
+        .WritingView article aside button:active {
           box-shadow: #580000 0 5px 0 0;
           -webkit-box-shadow: #580000 0 5px 0 0;
           -ms-box-shadow: #580000 0 5px 0 0;
@@ -1330,9 +1374,6 @@ body {
   .FilmView .carousel ul li figure.video iframe {
     height: 360px; } }
 @media all and (min-width: 1000px) {
-  @keyframes bounce {
-    50% {
-      transform: translateY(20px); } }
   .Home {
     background-repeat: no-repeat;
     background-position: 100% 20px;
@@ -1376,11 +1417,7 @@ body {
       .SiteHeader .Brand .ScrollDown {
         margin: 180px 0 0 230px;
         position: fixed;
-        animation: bounce 1s infinite;
-        -webkit-animation: bounce 1s infinite;
-        -ms-animation: bounce 1s infinite;
-        -moz-animation: bounce 1s infinite;
-        -o-animation: bounce 1s infinite; }
+        display: block; }
       .SiteHeader .Brand .ScrollDown:hover {
         background-color: black;
         color: white;
@@ -1394,14 +1431,12 @@ body {
     font-size: 30px;
     width: 870px;
     margin: 70px 0 0 45px;
-    position: fixed;
-    z-index: -1; }
+    position: fixed; }
 
   .SiteHeader .Brand .FullName {
     font-size: 60px;
     width: 950px;
-    position: fixed;
-    z-index: -1; }
+    position: fixed; }
 
   .SiteNav {
     padding: 20px 0;
@@ -1438,7 +1473,9 @@ body {
       .WritingView article h1 {
         font-size: 40px; }
       .WritingView article p.snippet.toggled {
-        font-size: 25px; }
+        font-size: 20px; }
+      .WritingView article .overlay .content p {
+        font-size: 20px; }
 
   /*------ Film View ---------------
   ---------------------------------- */

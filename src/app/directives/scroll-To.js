@@ -3,9 +3,9 @@
         .module('nick.app.directives')
         .directive('scrollTo', ScrollTo);
 
-    ScrollTo.$inject = ['$document','$window', '$timeout'];
+    ScrollTo.$inject = ['$document'];
 
-    function ScrollTo($document, $window, $timeout) {
+    function ScrollTo($document) {
         return {
             restrict: 'A',
             link: function (scope, element, attr) {

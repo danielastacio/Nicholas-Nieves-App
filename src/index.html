@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <header class="SiteHeader" image-url ng-class="site.assignClass()">
         <div class="Brand">
             <div class="FullName">
@@ -29,9 +28,9 @@
             <li ng-class="{active: site.view == 'Home'}"><a href="#/">Home</a></li>
             <li><a href="http://www.youtube.com/bbbkproductions" target="_blank">BBBk</a></li>
             <li ng-class="{active: site.view == 'Resume'}"><a href="#/resume">Resume</a></li>
-            <li ng-class="{active: site.view == 'Writing'}"><a href="#/writing">Writing</a></li>
             <li ng-class="{active: site.view == 'Gallery'}"><a href="#/gallery">Gallery</a></li>
             <li ng-class="{active: site.view == 'Film'}"><a href="#/film">Film</a></li>
+            <li ng-class="{active: site.view == 'Writing'}"><a href="#/writing">Writing</a></li>
         </ul>
     </nav>
         <div class="TheView" ng-view></div>
@@ -87,6 +86,9 @@
      <!--****************  services  **************** -->
      <script src="app/services/_module.js"></script>
      <script src="app/services/viewport.js"></script>
+
+     <!--****************  js **************** -->
+     <script src="app/js/lightbox.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <header class="SiteHeader" image-url ng-class="site.assignClass()">
+    <header class="SiteHeader">
+        <img ng-src="{{site.assignBannerSrc()}}" ng-class="site.assignBannerClass()"/>
         <div class="Brand">
             <div class="FullName">
                 <span class="enhance">Nicholas</span> Nieves
@@ -17,7 +18,7 @@
             <div class="Skillset">
                 Actor. Writer. Storyteller.
             </div>
-            <button class="ScrollDown" scroll-to="TheView">&#11015;</button>
+            <button class="ScrollDown" scroll-to="TheView"></button>
         </div>
     </header>
     <nav class="SiteNav">
@@ -80,7 +81,7 @@
     <script src="app/directives/_module.js"></script>
     <script src="app/directives/toggle-element.js"></script>
     <script src="app/directives/traverse.js"></script>
-    <script src="app/directives/background-image.js"></script>
+    <script src="app/directives/youtube-url.js"></script>
     <script src="app/directives/scroll-To.js"></script>
     
      <!--****************  services  **************** -->
@@ -89,6 +90,7 @@
 
      <!--****************  js **************** -->
      <script src="app/js/lightbox.js"></script>
+     <script src="app/js/touch.js"></script>
 </body>
 
 </html>

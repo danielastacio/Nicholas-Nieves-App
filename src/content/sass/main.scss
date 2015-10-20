@@ -491,11 +491,11 @@ body {
   }
 
   button.DownloadPdf a {
-    background-color: white;
-    color: black;
+    background: url(../images/navBack.png) repeat;
+    color: white;
     text-decoration: none;
     display: block;
-    padding: 0 20px;
+    padding: 5px 20px;
     line-height: 2em;
     font-size: 18px;
     @include vendor-prefix(box-shadow, rgb(88,0,0) 0 10px 0 0);
@@ -510,38 +510,50 @@ body {
   /*------ Home View ---------------
   ---------------------------------- */
 
-  .Home {
-    background-repeat: no-repeat;
-    background-position: 40% 0;
-    background-size: 33.333333%;
+  .HomeBanner {
+    position: absolute;
+    margin: 0% 50%;
+    left: -24%;
+    top: 0;
+    width: 33.3333333%;
   }
     
-  .Writing {
-      background-repeat: no-repeat;
-      background-position: 45% 0;
-      background-size: 33.333333%;
+  .WritingBanner {
+    position: absolute;
+    margin: 0% 50%;
+    left: -19%;
+    top: 0;
+    width: 33.3333333%;
   }
 
-  .Film {
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: 33.333333%;
+  .FilmBanner {
+    position: absolute;
+    margin: 0% 50%;
+    left: -17%;
+    top: 0;
+    width: 33.3333333%;
   }
 
-  .Resume {
-    background-repeat: no-repeat;
-    background-position: 57% 0;
-    background-size: 33.333333%;
+  .ResumeBanner {
+    position: absolute;
+    margin: 0% 50%;
+    left: -10%;
+    width: 33.3333333%;
+    top: 0;
   }
 
-  .Gallery {
-    background-repeat: no-repeat;
-    background-position: 45% 0;
-    background-size: 33.333333%;
+  .GalleryBanner {
+    position: absolute;
+    margin: 0% 50%;
+    left: -20%;
+    top: 0;
+    width: 33.3333333%;
   }
 
   .SiteHeader {
     text-transform: uppercase;
+    position: relative;
+    z-index: 0;
   }
 
   .SiteHeader .Brand {
@@ -818,7 +830,7 @@ body {
           padding: 10px 30px;
           border: none;
           margin-top: 40px;
-          background-color: rgb(140,0,0);
+          background: url(../images/navBack.png) repeat;
           @include vendor-prefix(box-shadow, rgb(88,0,0) 0 10px 0 0);
           @include vendor-prefix(border-radius, 9px);
           @include vendor-prefix(transition, all .4s);
@@ -1073,19 +1085,6 @@ body {
     color: white;
     padding: 60px 5%;
 
-    .Highlights { 
-      padding: 25px;
-      border-right: 1px solid rgb(0,0,0);
-      border-left: 1px solid rgb(0,0,0);
-      @include vendor-prefix(animation, flash 6s infinite);
-      @include vendor-prefix(border-radius, 500px 0px 400px 0px);
-
-      h1 {
-        margin: 0;
-        text-align: center;
-      } //end of h1  
-    } // end of Highlights
-
     .VideoGenres {
       padding: 25px;
       margin-top: 25px;
@@ -1142,7 +1141,7 @@ body {
         } // end of list
       } // end of ul
 
-      .HighlightsList {
+      .Highlights {
         width: 200%;
 
         li {
@@ -1177,7 +1176,7 @@ body {
       .prevButton {
         float: left;
         margin: 0;
-        background-color: rgb(140,0,0);
+        background: url(../images/navBack.png) repeat;
         font-size: 50px;
         padding: 0 20px 0 10px;
         @include vendor-prefix(box-shadow, rgb(80,0,0) 8px 5px 0px 0px);
@@ -1191,7 +1190,7 @@ body {
 
       .nextButton {
         float: right;
-        background-color: rgb(140,0,0);
+        background: url(../images/navBack.png) repeat;
         font-size: 50px;
         padding: 0 15px 0 20px;
         margin-bottom: 5px;
@@ -1286,7 +1285,7 @@ body {
       .prevButton {
         float: left;
         margin: 0;
-        background-color: rgb(140,0,0);
+        background: url(../images/navBack.png) repeat;
         font-size: 50px;
         color: white;
         padding: 0 20px 0 10px;
@@ -1302,7 +1301,7 @@ body {
       .nextButton {
         float: right;
         color: white;
-        background-color: rgb(140,0,0);
+        background: url(../images/navBack.png) repeat;
         font-size: 50px;
         padding: 0 15px 0 20px;
         margin-bottom: 5px;
@@ -1322,44 +1321,41 @@ body {
 
 @media all and (min-width: 730px) {
 
-  .Home {
-        
-        background-repeat: no-repeat;
-        background-position: 100% 20%;
-        background-attachment: fixed;
-        background-size: 73.333333%;
+    .HomeBanner {
+      position: fixed;
+      top: 9%;
+      margin: 3% 50%;
+      width: 73.333333%;
     }
 
-    .Writing {
-        
-        background-repeat: no-repeat;
-        background-position: 100% 24%;
-        background-attachment: fixed;
-        background-size: 73.333333%;
+    .WritingBanner {
+      position: fixed;
+      top: 9%;
+      left: -20px;
+      margin: 3% 50%;
+      width: 73.333333%;
     }
 
-    .Film {
-        
-        background-repeat: no-repeat;
-        background-position: 100% 24%;
-        background-attachment: fixed;
-        background-size: 73.333333%;
+    .FilmBanner {
+      position: fixed;
+      top: 9%;
+      left: 0;
+      margin: 3% 50%;
+      width: 73.333333%;
     }
 
-    .Resume {
-        
-        background-repeat: no-repeat;
-        background-position: 100% 24%;
-        background-attachment: fixed;
-        background-size: 73.333333%;
+    .ResumeBanner {
+      position: fixed;
+      width: 73.333333%;
+      margin: 11% 50%;
     }
 
-    .Gallery {
-        
-        background-repeat: no-repeat;
-        background-position: 100% 24%;
-        background-attachment: fixed;
-        background-size: 73.333333%;
+    .GalleryBanner {
+      position: fixed;
+      top: 9%;
+      left: -120px;
+      margin: 3% 50%;
+      width: 73.333333%;
     }
 
   .SiteHeader {
@@ -1496,39 +1492,39 @@ body {
 
 @media all and (min-width: 1000px) {
 
-  .Home {
-        background-repeat: no-repeat;
-        background-position: 100% 20px;
-        background-attachment: fixed;
-        background-size: 935px;
+  .HomeBanner {
+    width: 935px;
+    margin: 0 50%;
+    top: 50px;
+    left: -400px;
+  }
+
+    .WritingBanner {
+      width: 935px;
+      margin: 0 50%;
+      top: 100px;
+      left: -350px;
     }
 
-    .Writing {
-        background-repeat: no-repeat;
-        background-position: 100% 60px;
-        background-attachment: fixed;
-        background-size: 935px;
+    .FilmBanner {
+      width: 935px;
+      margin: 0 50%;
+      top: 100px;
+      left: -90px;
     }
 
-    .Film {
-        background-repeat: no-repeat;
-        background-position: 100% 60px;
-        background-attachment: fixed;
-        background-size: 935px;
+    .ResumeBanner {
+      width: 935px;
+      margin: 0 50%;
+      top: 60px;
+      left: -200px;
     }
 
-    .Resume {
-        background-repeat: no-repeat;
-        background-position: 100% 60px;
-        background-attachment: fixed;
-        background-size: 935px;
-    }
-
-    .Gallery {
-        background-repeat: no-repeat;
-        background-position: 100% 60px;
-        background-attachment: fixed;
-        background-size: 935px;
+    .GalleryBanner {
+        width: 935px;
+        margin: 0 50%;
+        top: 55px;
+        left: -240px;
     }
 
   .SiteHeader {
@@ -1546,17 +1542,74 @@ body {
         }
 
         .ScrollDown {
-          margin: 180px 0 0 230px;
+          margin: 140px 0 0 230px;
           position: fixed;
+          z-index: 1;
           display: block;
+          background: url(../images/widgets/downArrow.png) no-repeat 50% 50%;
+          padding: 30px;
+          border: 1px solid black;
+          @include vendor-prefix('border-radius', '30px');
+          @include vendor-prefix('animation', 'fadeIn 1s linear')
         }
 
         .ScrollDown:hover {
-          background-color: black;
           color: white;
           @include vendor-prefix('border-radius', '50px');
         }
       }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: rotate(460deg);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: rotate(460deg);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: rotate(460deg);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: rotate(460deg);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .SiteHeader .Brand .Skillset {
@@ -1635,11 +1688,6 @@ body {
   /*------ Film View ---------------
   ---------------------------------- */
   .FilmView {
-    .Highlights {
-      margin: 0 auto;
-      width: 900px;
-      padding: 25px 0;
-    }
     .VideoGenres {
       margin: 25px auto 0;
       width: 900px;

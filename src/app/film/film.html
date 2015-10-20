@@ -1,107 +1,99 @@
 <section class="FilmView" ng-controller="Film as film">
-	<section class="Highlights">
-		<h1>
-			Highlights
-		</h1>
-		<div class="carousel" traverse>
-			<ul class="HighlightsList">
-				<li>
-					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/780smiEqmSc" frameborder="0" allowfullscreen></iframe>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/5ffvzMr6aTc?" frameborder="0" allowfullscreen></iframe>
-					</figure>
-				</li>
-			</ul>
-			<button class="prevButton">&lt;</button>
-			<button class="nextButton">&gt;</button>
-		</div>
-	</section>
 	<section class="VideoGenres">
 		<nav>
 			<ul>
+				<li ng-click="film.genre = 'Highlights'" ng-class="{current: film.genre === 'Highlights'}">Highlights</li>
 				<li ng-click="film.genre = 'Comedy'" ng-class="{current: film.genre === 'Comedy'}">Comedy</li>
 				<li ng-click="film.genre = 'Drama'"  ng-class="{current: film.genre === 'Drama'}">Drama</li>
 				<li ng-click="film.genre = 'Miscellaneous'" ng-class="{current: film.genre === 'Miscellaneous'}">Miscellaneous</li>
 			</ul>
 		</nav>
 		<div class="carousel" traverse>
+			<ul class="Highlights" ng-show="film.genre === 'Highlights'" ng-class="{current: film.genre === 'Highlights'}">
+				<li>
+					<figure class="video">
+						<button youtube-url="{{film.videos.highlights.dramaReel.url}}" class="play">play</button>
+					</figure>
+				</li>
+				<li>
+					<figure class="video">
+						<button youtube-url="{{film.videos.highlights.trailer.url}}" class="play">play</button>
+					</figure>
+				</li>
+			</ul>
 			<ul class="Comedy" ng-show="film.genre === 'Comedy'" ng-class="{current: film.genre === 'Comedy'}">
 				<li>
 					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/hyyp-3GNqnE" frameborder="0" allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.comedy.textySketch.url}}" class="play">play</button>
 					</figure>
 				</li>
 				<li>
 					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/HPYD8K4OuRM" frameborder="0" allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.comedy.cupForYourLemonade.url}}" class="play">play</button>
 					</figure>
 				</li>
 				<li>
 					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/42fDDsnGzzE" frameborder="0" allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.comedy.mitch.url}}" class="play">play</button>
 					</figure>
 				</li>
 				<li>
 					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/qp3NJl7DLgQ" frameborder="0" allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.comedy.chronicMisconception.url}}" class="play">play</button>
 					</figure>
 				</li>
 				<li>
 					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/7s9T1psZY5Y" frameborder="0" allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.comedy.eliteDaily.url}}" class="play">play</button>
 					</figure>
 				</li>
 			</ul>
 			<ul class="Drama" ng-show="film.genre === 'Drama'" ng-class="{current: film.genre === 'Drama'}">
 				<li>
 					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/-eCertmgZRc?" frameborder="0" allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.drama.tenToSix.url}}" class="play">play</button>
 					</figure>
 				</li>
 				<li>
 					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/C6EEB_7NuvE" frameborder="0" allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.drama.headlights.url}}" class="play">play</button>
 					</figure>
 				</li>
 				<li>
 					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/KbMFEAnZiTs" frameborder="0" allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.drama.seanAndFrank.url}}" class="play">play</button>
 					</figure>
 				</li>
 				<li>
 					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/C9WOPIyXcmo" frameborder="0" allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.drama.teddy.url}}" class="play">play</button>
 					</figure>
 				</li>
 				<li>
 					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/weYV4p6rWFA" frameborder="0" allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.drama.inTheEnd.url}}" class="play">play</button>
 					</figure>
 				</li>
 			</ul>
 			<ul class="Miscellaneous" ng-show="film.genre === 'Miscellaneous'" ng-class="{current: film.genre === 'Miscellaneous'}">
 				<li>
 					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/Uq9nV2K2tHA" frameborder="0" allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.miscellaneous.withoutWords.url}}" class="play">play</button>
 					</figure>
 				</li>
 				<li>
 					<figure class="video">
-						<iframe src="https://player.vimeo.com/video/60473648?color=ff9933&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.miscellaneous.twix.url}}" class="play">play</button>
 					</figure>
 				</li>
 				<li>
 					<figure class="video">
-						<iframe src="https://player.vimeo.com/video/51100163?color=ff9933&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.miscellaneous.listerine.url}}" class="play">play</button>
 					</figure>
 				</li>
 				<li>
 					<figure class="video">
-						<iframe src="https://www.youtube.com/embed/LbL-d9T45gI" frameborder="0" allowfullscreen></iframe>
+						<button youtube-url="{{film.videos.miscellaneous.topFive.url}}" class="play">play</button>
 					</figure>
 				</li>
 			</ul>

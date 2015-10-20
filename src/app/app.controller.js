@@ -8,6 +8,8 @@
 	function controller($scope, $window, viewportService) {
 		var vm = this;
 		vm.assignClass = assignClass;
+		vm.assignBannerSrc = assignBannerSrc;
+		vm.assignBannerClass = assignBannerClass;
 		vm.view = null;
 
 		vm.banners = {
@@ -21,6 +23,50 @@
 
 		function assignClass() {
 			return vm.view;
+		}
+
+		function assignBannerSrc() {
+			if(vm.view === 'Home') {
+				return vm.banners.home;
+			}
+
+			if(vm.view === 'Resume') {
+				return vm.banners.resume;
+			}
+
+			if(vm.view === 'Writing') {
+				return vm.banners.writing;
+			}
+
+			if(vm.view === 'Film') {
+				return vm.banners.film;
+			}
+
+			if(vm.view === 'Gallery') {
+				return vm.banners.gallery;
+			}
+		}
+
+		function assignBannerClass() {
+			if(vm.view === 'Home') {
+				return 'HomeBanner';
+			}
+
+			if(vm.view === 'Resume') {
+				return 'ResumeBanner';
+			}
+
+			if(vm.view === 'Writing') {
+				return "WritingBanner";
+			}
+
+			if(vm.view === 'Film') {
+				return 'FilmBanner';
+			}
+
+			if(vm.view === 'Gallery') {
+				return 'GalleryBanner';
+			}
 		}
 
 		$scope.$watch(function () {

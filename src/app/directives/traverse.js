@@ -145,7 +145,7 @@
 
                                 maxIdx = ulLists[i].children().length - 1;
 
-                                if (scope.film.genre === 'Comedy' && ulLists[i].hasClass('Comedy')) {
+                                if (scope.film.genre === 'Highlights' && ulLists[i].hasClass('Highlights')) {
 
                                     targetUlList.push(ulLists[i]);
                                     if (target.hasClass('nextButton')) {
@@ -179,7 +179,19 @@
                                         traverseBackwards();
                                     } // end of inner if
                                 } // end of else if
-                            } // end of else if
+
+                                else if (scope.film.genre === 'Comedy' && ulLists[i].hasClass('Comedy')) {
+
+                                    targetUlList.push(ulLists[i]);
+                                    if (target.hasClass('nextButton')) {
+                                        traverseForward();
+                                    } // end of inner if
+
+                                    if (target.hasClass('prevButton')) {
+                                        traverseBackwards();
+                                    } // end of inner if
+                                } // end of else if
+                            } // end of for
                         } // end of else
                     }); // end of element click
                 }); // end of ready function

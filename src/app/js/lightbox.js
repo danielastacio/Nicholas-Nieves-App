@@ -1,13 +1,14 @@
 (function($) {
 
 	$(document).ready(function () { 
+
 		function openLightbox(elem) {
-			$('html').addClass('no-scroll');
+			$('html, body').addClass('no-scroll');
 			$('' + elem + ' .overlay').fadeIn(200);
 		}
 
 		function closeLightbox() {
-			$('html').removeClass('no-scroll');
+			$('html, body').removeClass('no-scroll');
 			$('.overlay').fadeOut(200);
 
 			for (var i = 0; i < $('.overlay').length; i++) {

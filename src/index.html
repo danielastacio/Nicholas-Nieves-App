@@ -18,10 +18,10 @@
             <div class="Skillset">
                 Actor. Writer. Storyteller.
             </div>
-            <button class="ScrollDown" scroll-to="TheView"></button>
+            <button class="ScrollDown" scroll-to="SiteNav hud"></button>
         </div>
     </header>
-    <nav class="SiteNav">
+    <nav class="SiteNav hud">
         <button type="button" class="Hamburger" toggle-Elm="SiteNavList">
             &#9776; Menu
         </button>
@@ -64,6 +64,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
 
+    <script>
+        (function($) {
+            $(document).ready(function () { 
+                $('body').bind('touchstart', function() {});
+            });
+        })(jQuery);
+    </script>
+
     <!--****************  app  **************** -->
 
     <script src="app/app.module.js"></script>
@@ -90,7 +98,6 @@
 
      <!--****************  js **************** -->
      <script src="app/js/lightbox.js"></script>
-     <script src="app/js/touch.js"></script>
 </body>
 
 </html>

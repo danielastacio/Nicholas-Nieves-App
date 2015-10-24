@@ -8,97 +8,12 @@
 				<li ng-click="film.genre = 'Miscellaneous'" ng-class="{current: film.genre === 'Miscellaneous'}">Miscellaneous</li>
 			</ul>
 		</nav>
-		<div class="carousel" traverse>
-			<ul class="Highlights" ng-show="film.genre === 'Highlights'" ng-class="{current: film.genre === 'Highlights'}">
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.highlights.dramaReel.url}}" class="play">play</button>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.highlights.trailer.url}}" class="play">play</button>
-					</figure>
-				</li>
-			</ul>
-			<ul class="Comedy" ng-show="film.genre === 'Comedy'" ng-class="{current: film.genre === 'Comedy'}">
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.comedy.textySketch.url}}" class="play">play</button>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.comedy.cupForYourLemonade.url}}" class="play">play</button>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.comedy.mitch.url}}" class="play">play</button>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.comedy.chronicMisconception.url}}" class="play">play</button>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.comedy.eliteDaily.url}}" class="play">play</button>
-					</figure>
-				</li>
-			</ul>
-			<ul class="Drama" ng-show="film.genre === 'Drama'" ng-class="{current: film.genre === 'Drama'}">
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.drama.tenToSix.url}}" class="play">play</button>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.drama.headlights.url}}" class="play">play</button>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.drama.seanAndFrank.url}}" class="play">play</button>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.drama.teddy.url}}" class="play">play</button>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.drama.inTheEnd.url}}" class="play">play</button>
-					</figure>
-				</li>
-			</ul>
-			<ul class="Miscellaneous" ng-show="film.genre === 'Miscellaneous'" ng-class="{current: film.genre === 'Miscellaneous'}">
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.miscellaneous.withoutWords.url}}" class="play">play</button>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.miscellaneous.twix.url}}" class="play">play</button>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.miscellaneous.listerine.url}}" class="play">play</button>
-					</figure>
-				</li>
-				<li>
-					<figure class="video">
-						<button youtube-url="{{film.videos.miscellaneous.topFive.url}}" class="play">play</button>
-					</figure>
-				</li>
-			</ul>
-			<button class="prevButton">&lt;</button>
-			<button class="nextButton">&gt;</button>
+		<div class="carousel">
+			<figure class="video" youtube-url>
+				<iframe src="" allowfullscreen></iframe>
+			</figure>
+			<button class="prevButton" ng-click="film.back()">&lt;</button>
+			<button class="nextButton" ng-click="film.forward()">&gt;</button>
 		</div>
 	</section>
 </section>

@@ -489,9 +489,6 @@ body {
 
   /*------ Home View ---------------
   ---------------------------------- */
-  img {
-    transition: all 1s;
-  }
   .HomeBanner {
     position: absolute;
     margin: 0% 50%;
@@ -531,6 +528,13 @@ body {
     text-transform: uppercase;
     position: relative;
     z-index: 0; }
+
+  .SiteHeader img {
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -ms-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s; }
 
   .SiteHeader .Brand {
     margin: 0 auto;
@@ -708,9 +712,17 @@ body {
       margin: 0;
       font-size: 25px; }
     .HomeView .DemoReel .video {
-      margin: 0; }
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      padding-top: 25px;
+      height: 0; }
       .HomeView .DemoReel .video iframe {
-        width: 100%; }
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
     .HomeView .ContactMe {
       padding: 10% 0;
       margin: 0 auto;
@@ -862,8 +874,8 @@ body {
         background-color: black;
         display: none; }
         .WritingView article .overlay .content {
-          padding: 5%;
-          margin: 20px auto;
+          padding: 20px;
+          margin: 60px auto;
           max-width: 800px; }
           .WritingView article .overlay .content p {
             overflow: auto;
@@ -1063,52 +1075,80 @@ body {
           background: #8c0000 url(../images/navBack.png); }
     .FilmView .carousel {
       overflow: hidden; }
+      .FilmView .carousel .video {
+        margin: 0 0 30px;
+        position: relative;
+        padding-bottom: 56.25%;
+        /* 16:9 */
+        padding-top: 25px;
+        height: 0; }
+        .FilmView .carousel .video iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          max-width: 640px;
+          height: 100%;
+          border: none; }
       .FilmView .carousel ul {
         list-style: none;
         padding: 0;
-        overflow: auto;
+        overflow: hidden;
         position: relative;
         left: 0%; }
         .FilmView .carousel ul li {
-          float: left; }
-          .FilmView .carousel ul li figure.video {
-            background: url('https://i.ytimg.com/vi/780smiEqmSc/0.jpg') no-repeat;
-          background-size: 100%;
-          height: 420px;
-            margin: 0; }
-            .FilmView .carousel ul li figure.video iframe {
-              width: 100%;
-              max-width: 640px;
-              height: 420px;
-              border: none; }
+          float: left;
+          background-size: contain;
+          background-repeat: no-repeat; }
       .FilmView .carousel .Highlights {
         width: 200%; }
         .FilmView .carousel .Highlights li {
-          background: url('https://i.ytimg.com/vi/780smiEqmSc/0.jpg') no-repeat;
-          background-size: 100%;
-          height: 420px;
           width: 50%; }
-
-          .FilmView .carousel .Highlights li + li{
-          background: url('https://i.ytimg.com/vi/5ffvzMr6aTc/0.jpg') no-repeat;
-          background-size: 100%;
-          height: 420px;
-          width: 50%; }
+        .FilmView .carousel .Highlights .DramaReel {
+          background-image: url(http://img.youtube.com/vi/780smiEqmSc/maxresdefault.jpg); }
+        .FilmView .carousel .Highlights .Trailer {
+          background-image: url(http://img.youtube.com/vi/5ffvzMr6aTc/maxresdefault.jpg); }
       .FilmView .carousel .Comedy {
         width: 500%; }
         .FilmView .carousel .Comedy li {
-          background: url('https://i.ytimg.com/vi/r5E_wBOTxTw/0.jpg') no-repeat;
-          background-size: 100%;
-          height: 420px;
           width: 20%; }
+        .FilmView .carousel .Comedy .TextySketch {
+          background-image: url(http://img.youtube.com/vi/hyyp-3GNqnE/maxresdefault.jpg); }
+        .FilmView .carousel .Comedy .Lemonade {
+          background-image: url(http://img.youtube.com/vi/HPYD8K4OuRM/maxresdefault.jpg); }
+        .FilmView .carousel .Comedy .Mitch {
+          background-image: url(http://img.youtube.com/vi/42fDDsnGzzE/maxresdefault.jpg); }
+        .FilmView .carousel .Comedy .Chronic {
+          background-image: url(http://img.youtube.com/vi/qp3NJl7DLgQ/maxresdefault.jpg); }
+        .FilmView .carousel .Comedy .EliteDaily {
+          background-image: url(http://img.youtube.com/vi/7s9T1psZY5Y/maxresdefault.jpg); }
       .FilmView .carousel .Drama {
         width: 500%; }
         .FilmView .carousel .Drama li {
           width: 20%; }
+        .FilmView .carousel .Drama .TenToSix {
+          background-image: url(http://img.youtube.com/vi/-eCertmgZRc/maxresdefault.jpg); }
+        .FilmView .carousel .Drama .Headlights {
+          background-image: url(http://img.youtube.com/vi/C6EEB_7NuvE/maxresdefault.jpg); }
+        .FilmView .carousel .Drama .SeanAndFrank {
+          background-image: url(http://img.youtube.com/vi/KbMFEAnZiTs/maxresdefault.jpg); }
+        .FilmView .carousel .Drama .Teddy {
+          background-image: url(http://img.youtube.com/vi/C9WOPIyXcmo/maxresdefault.jpg); }
+        .FilmView .carousel .Drama .InTheEnd {
+          background-image: url(http://img.youtube.com/vi/weYV4p6rWFA/maxresdefault.jpg); }
       .FilmView .carousel .Miscellaneous {
         width: 400%; }
         .FilmView .carousel .Miscellaneous li {
           width: 25%; }
+        .FilmView .carousel .Miscellaneous .WithoutWords {
+          background-image: url(http://img.youtube.com/vi/Uq9nV2K2tHA/0.jpg);
+          background-position: 50% 50%; }
+        .FilmView .carousel .Miscellaneous .Twix {
+          background-image: url(http://img.youtube.com/vi/C6EEB_7NuvE/maxresdefault.jpg); }
+        .FilmView .carousel .Miscellaneous .Listerine {
+          background-image: url(http://img.youtube.com/vi/KbMFEAnZiTs/maxresdefault.jpg); }
+        .FilmView .carousel .Miscellaneous .TopFive {
+          background-image: url(http://img.youtube.com/vi/LbL-d9T45gI/maxresdefault.jpg); }
       .FilmView .carousel .prevButton {
         float: left;
         margin: 0;
@@ -1281,7 +1321,7 @@ body {
   .WritingBanner {
     position: fixed;
     top: 9%;
-    left: -20px;
+    left: -150px;
     margin: 3% 50%;
     width: 73.333333%; }
 
@@ -1387,8 +1427,9 @@ body {
     width: 640px;
     margin: 0 auto; }
 
-  .FilmView .carousel ul li figure.video iframe {
-    height: 420px; } }
+  .FilmView .carousel ul li figure.video h1 {
+    font-size: 20px;
+    margin-left: 20px; } }
 @media all and (min-width: 1000px) {
   .HomeBanner {
     width: 935px;

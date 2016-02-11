@@ -1,2 +1,2 @@
 # Nicholas-Nieves-App
-# This is a personal angular application for Nicholas Nieves
+# This is an angular application developed for Nicholas Nieves who is a client of Dastacio Designs
